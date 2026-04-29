@@ -16,7 +16,7 @@ Open [http://localhost:3000](http://localhost:3000).
 1. Push this repository to GitHub.
 2. In [Vercel](https://vercel.com), **Add New Project** and import the repo.
 3. Framework preset: **Next.js**. Root directory: `.` (repository root).
-4. Optional: set `NEXT_PUBLIC_SITE_URL` to your production URL (e.g. `https://your-domain.vercel.app`) so Open Graph preview URLs are correct if you are not using Vercel’s default `VERCEL_URL`.
+4. Set `NEXT_PUBLIC_SITE_URL` to your canonical production URL (e.g. `https://your-domain.vercel.app`) so Open Graph `metadataBase` and social previews resolve correctly. If unset, the build falls back to `VERCEL_URL` when present, then localhost for local builds.
 
 Production build locally:
 
@@ -30,7 +30,8 @@ npm start
 | File | Purpose |
 |------|---------|
 | `public/cbre-logo.png` | CBRE wordmark—edge-trimmed to hug the letters (no excess canvas). Re-run `node scripts/trim-cbre-logo.mjs` after replacing the source asset (writes backup `cbre-logo-original.png` once; backup is gitignored). |
-| `public/charley-forey-resume-2026.pdf` | Resume download |
+| `public/og-cbre-conversation.png` | Open Graph / Twitter preview (1200×630). Regenerate with `npm run generate-og` after editing `scripts/generate-og.mjs`. |
+| `public/charley-forey-resume-2026.pdf` | Resume download (keep in sync with your latest PDF; copy into `public/` after export). |
 | `public/charley.png` | Profile photo (from `profile_photo.png` or equivalent). If missing, an initials fallback is shown. |
 
 ## Selected videos

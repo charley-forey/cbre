@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "trim-cbre-logo": "node scripts/trim-cbre-logo.mjs"
+    "trim-cbre-logo": "node scripts/trim-cbre-logo.mjs",
+    "generate-og": "node scripts/generate-og.mjs"
   },
   "dependencies": {
     "next": "^15.3.0",

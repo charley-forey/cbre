@@ -14,13 +14,17 @@ const outfit = Outfit({
   display: "swap",
 });
 
-const siteUrl =
-  process.env.VERCEL_URL != null
-    ? `https://${process.env.VERCEL_URL}`
-    : process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const siteUrlRaw =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL != null ? `https://${process.env.VERCEL_URL}` : null);
+
+const siteUrl = siteUrlRaw ?? "http://localhost:3000";
 
 const pageTitle =
-  "Head of AI Products | Charley Forey · CBRE conversation";
+  "Head Of AI Products | Charley Forey · CBRE Conversation";
+
+const description =
+  "Conversation with CBRE on Head Of AI Products: live demos of conversational AI and workflow automation, role alignment, and enterprise AI product delivery background.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -28,18 +32,28 @@ export const metadata: Metadata = {
     default: pageTitle,
     template: "%s · Charley Forey",
   },
-  description:
-    "Conversation with CBRE on Head of AI Products: live demos of conversational AI and workflow automation, plus background on experience in enterprise AI product delivery.",
+  description,
   openGraph: {
     title: pageTitle,
-    description:
-      "Live demos and context for the Head of AI Products conversation at CBRE.",
+    description,
+    url: "/",
+    siteName: "Charley Forey",
+    images: [
+      {
+        url: "/og-cbre-conversation.png",
+        width: 1200,
+        height: 630,
+        alt: "Head Of AI Products — Charley Forey — Live demos and role conversation",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: pageTitle,
-    description:
-      "Live demos and context for the Head of AI Products conversation at CBRE.",
+    description,
+    images: ["/og-cbre-conversation.png"],
   },
 };
 

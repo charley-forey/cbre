@@ -1,4 +1,6 @@
 import { ProfilePhoto } from "@/components/ProfilePhoto";
+import { SiteSectionNav } from "@/components/SiteSectionNav";
+import { VideoEmbed } from "@/components/VideoEmbed";
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
@@ -68,6 +70,15 @@ function ExternalIcon({ className }: { className?: string }) {
 export default function Home() {
   return (
     <div className="relative min-h-screen overflow-hidden">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-cbre focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white focus:outline-none focus:ring-2 focus:ring-white"
+      >
+        Skip To Main Content
+      </a>
+
+      <SiteSectionNav mailtoHref={mailtoHref} />
+
       <div
         className="pointer-events-none absolute inset-0 bg-[length:48px_48px] bg-grid-fade opacity-100"
         aria-hidden
@@ -75,7 +86,10 @@ export default function Home() {
       <div className="pointer-events-none absolute -left-40 top-20 h-72 w-72 rounded-full bg-cbre/15 blur-[100px]" />
       <div className="pointer-events-none absolute -right-32 bottom-40 h-64 w-64 rounded-full bg-cbre/10 blur-[90px]" />
 
-      <main className="relative mx-auto max-w-3xl px-5 pb-24 pt-12 sm:px-8 sm:pt-16">
+      <main
+        id="main-content"
+        className="relative mx-auto max-w-3xl px-5 pb-24 pt-8 sm:px-8 sm:pt-10"
+      >
         <div className="relative mb-12 flex w-full justify-center sm:mb-14">
           <div
             className="pointer-events-none absolute inset-x-4 top-1/2 -z-10 h-28 -translate-y-1/2 rounded-[2rem] bg-cbre/20 blur-3xl sm:inset-x-8 sm:h-36"
@@ -95,87 +109,130 @@ export default function Home() {
         </div>
 
         <p className="mb-6 text-center text-xs font-medium uppercase tracking-[0.2em] text-zinc-500">
-          Built for CBRE conversation · April 2026
+          Built For CBRE Conversation · April 2026
         </p>
 
         <header className="mb-14 text-center">
           <h1 className="font-display text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-4xl">
-            Head of AI Products
+            Head Of AI Products
           </h1>
           <p className="mt-3 text-lg text-cbre-bright sm:text-xl">
-            Strategy, demos &amp; how I work
+            Roadmap Thinking, Live Demos, And Operating Rhythm
           </p>
           <p className="mx-auto mt-8 max-w-xl text-pretty text-base leading-relaxed text-zinc-400 sm:text-[17px]">
-            Enterprise AI product leadership means turning complex opportunities
+            Enterprise AI product leadership is turning ambiguous opportunities
             into{" "}
             <span className="text-zinc-300">
               safe, measurable capabilities
             </span>
-            —from discovery and evaluation through adoption—partnering across
-            product, data, engineering, and governance so GenAI, predictive
-            insight, and agentic automation land where they actually matter.
+            : clear success criteria from discovery through adoption, working
+            across product, data, engineering, and governance so{" "}
+            <strong className="font-semibold text-zinc-300">GenAI</strong>,{" "}
+            <strong className="font-semibold text-zinc-300">
+              predictive insight
+            </strong>
+            , and{" "}
+            <strong className="font-semibold text-zinc-300">
+              agentic automation
+            </strong>{" "}
+            show up where operators actually live—not as pilots that stall.
           </p>
         </header>
 
         <section
-          className="mb-14"
+          id="section-fit"
+          className="section-anchor mb-14"
+          aria-labelledby="fit-heading"
+        >
+          <h2
+            id="fit-heading"
+            className="font-display text-xl font-semibold text-zinc-100 sm:text-2xl"
+          >
+            Why This Role And CBRE
+          </h2>
+          <div className="mt-5 space-y-4 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
+            <p>
+              CBRE operates mission-critical workflows across leasing, capital
+              markets, facilities, and client delivery—high volume, high stakes,
+              and highly distributed teams. That is exactly where AI product
+              leadership earns its keep:{" "}
+              <span className="text-zinc-300">
+                retrieval and workflows on messy real-world data
+              </span>
+              , agent patterns with access control and audit discipline, and
+              orchestration that clears an enterprise reliability bar.
+            </p>
+            <p>
+              The demos and videos on this page are intentionally practical—so
+              we can pressure-test what “good” looks like in your constraints,
+              not in theory.
+            </p>
+          </div>
+        </section>
+
+        <section
+          id="section-proof"
+          className="section-anchor mb-14"
           aria-labelledby="proof-heading"
         >
           <h2
             id="proof-heading"
-            className="font-display text-lg font-semibold text-zinc-100"
+            className="font-display text-xl font-semibold text-zinc-100 sm:text-2xl"
           >
-            Proof points
+            Proof Points
           </h2>
-          <ul className="mt-5 space-y-4">
+          <ul className="mt-5 space-y-5">
             <li className="flex gap-3 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
               <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-cbre" />
               <span>
                 <strong className="font-semibold text-zinc-300">
-                  Trimble — Agentic AI Platform (Principal AI Solutions Architect):
+                  Trimble — Agentic AI Platform (Principal AI Solutions
+                  Architect):
                 </strong>{" "}
-                Shipped{" "}
+                Drove adoption and measurable outcomes on an agentic platform:
+                scaling to{" "}
+                <strong className="font-semibold text-zinc-300">150+</strong>{" "}
+                internal and external teams with{" "}
+                <strong className="font-semibold text-zinc-300">~40%</strong>{" "}
+                improvement in decision-making where program metrics apply. At
+                build scale:{" "}
                 <strong className="font-semibold text-zinc-300">2,000+</strong>{" "}
                 API nodes,{" "}
                 <strong className="font-semibold text-zinc-300">1,500+</strong>{" "}
                 MCP tools, and{" "}
                 <strong className="font-semibold text-zinc-300">50+</strong>{" "}
-                production AI workflows—platform scope tied to{" "}
-                <strong className="font-semibold text-zinc-300">$14M+</strong>{" "}
-                in opportunity—while scaling adoption to{" "}
-                <strong className="font-semibold text-zinc-300">150+</strong>{" "}
-                internal and external teams and{" "}
-                <strong className="font-semibold text-zinc-300">~40%</strong>{" "}
-                improvement in decision-making across those teams (program
-                metrics).
+                production AI workflows—platform scope associated with{" "}
+                <strong className="font-semibold text-zinc-300">$14M+</strong> in
+                opportunity (pipeline / prioritization context, not booked
+                revenue).
               </span>
             </li>
             <li className="flex gap-3 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
               <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-cbre" />
               <span>
                 <strong className="font-semibold text-zinc-300">
-                  Revenue &amp; enablement:
+                  Revenue And Enablement:
                 </strong>{" "}
                 Influenced{" "}
                 <strong className="font-semibold text-zinc-300">$4M ARR</strong>{" "}
                 closed-won by aligning platform capabilities with{" "}
                 <strong className="font-semibold text-zinc-300">200+</strong>{" "}
-                stakeholders; authored{" "}
+                stakeholders. Built adoption assets:{" "}
                 <strong className="font-semibold text-zinc-300">15+</strong>{" "}
                 guides and templates that reduced implementation errors{" "}
-                <strong className="font-semibold text-zinc-300">~25%</strong>;{" "}
-                presented at{" "}
+                <strong className="font-semibold text-zinc-300">~25%</strong>.
+                Extended reach through{" "}
                 <strong className="font-semibold text-zinc-300">4</strong>{" "}
                 industry conferences (
                 <strong className="font-semibold text-zinc-300">5,000+</strong>{" "}
-                attendees) to build adoption and credibility.
+                attendees) to strengthen credibility and pull-through.
               </span>
             </li>
             <li className="flex gap-3 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
               <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-cbre" />
               <span>
                 <strong className="font-semibold text-zinc-300">
-                  Integrations + GenAI engineering:
+                  Integrations And GenAI Engineering:
                 </strong>{" "}
                 Delivered{" "}
                 <strong className="font-semibold text-zinc-300">21</strong>{" "}
@@ -190,15 +247,16 @@ export default function Home() {
                 proposed development scope). Built{" "}
                 <strong className="font-semibold text-zinc-300">Ludex AI</strong>
                 —LLM fine-tuning, RAG, vector embeddings, and custom MCP
-                servers—for NL→SQL analytics: the same architectural patterns I
-                bring to enterprise GenAI products.
+                servers—for NL→SQL analytics: the same end-to-end GenAI product
+                patterns I apply when shipping enterprise-grade capabilities.
               </span>
             </li>
           </ul>
         </section>
 
         <section
-          className="mb-16 space-y-6"
+          id="section-demos"
+          className="section-anchor mb-16 space-y-6"
           aria-labelledby="demo-links-heading"
         >
           <div>
@@ -206,50 +264,47 @@ export default function Home() {
               id="demo-links-heading"
               className="font-display text-xl font-semibold text-zinc-100 sm:text-2xl"
             >
-              Live proof-of-concept demos
+              Live Proof-Of-Concept Demos
             </h2>
             <p className="mt-4 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
-              These links go to working environments I stood up on{" "}
+              Two environments I operate end-to-end:{" "}
               <strong className="font-semibold text-zinc-300">LibreChat</strong>{" "}
-              (conversational AI, agents, MCP-style tooling) and{" "}
-              <strong className="font-semibold text-zinc-300">n8n</strong>{" "}
-              (workflow automation and integrations)—the same categories of
-              products enterprises already run at scale. The intent is a{" "}
+              for conversational AI, agents, and MCP-style tooling, and{" "}
+              <strong className="font-semibold text-zinc-300">n8n</strong> for
+              workflow automation and integrations. Together they are a{" "}
               <strong className="font-semibold text-zinc-300">
-                tangible reference
-              </strong>
-              : “what it feels like” when you pair modern chat + orchestration
-              with your data and governance—not a CBRE production system, but a
-              credible pattern you can react to and tear apart together.
+                reference stack
+              </strong>{" "}
+              for “what it feels like” when modern chat and orchestration meet
+              your data and governance—not a CBRE production system, but a
+              credible pattern we can react to and tear apart together.
             </p>
             <p className="mt-3 text-sm leading-relaxed text-zinc-500">
-              <span className="text-zinc-400">Why these stacks: </span>
-              Organizations such as{" "}
-              <strong className="font-medium text-zinc-400">Spotify</strong>{" "}
-              have publicly associated with{" "}
-              <strong className="font-medium text-zinc-400">LibreChat</strong>{" "}
-              for internal AI;{" "}
-              <strong className="font-medium text-zinc-400">Trimble</strong>{" "}
-              (where I ship agentic platform work) uses{" "}
-              <strong className="font-medium text-zinc-400">n8n</strong> in
-              production alongside other enterprise automation—so this isn’t a
-              toy stack; it’s what serious operators already standardize on.
+              <span className="font-semibold text-zinc-400">
+                Why These Stacks:{" "}
+              </span>
+              They mirror the{" "}
+              <strong className="font-medium text-zinc-400">
+                chat/agent plus orchestration
+              </strong>{" "}
+              combination enterprises commonly pilot—so the conversation stays
+              grounded in patterns you can compare to your roadmap.
             </p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid min-h-[132px] gap-4 sm:grid-cols-2">
             <a
               href={chatUrl}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open LibreChat proof of concept at chat.creai.solutions"
-              className="group flex flex-col rounded-2xl border border-zinc-800 bg-zinc-900/50 px-6 py-8 text-left shadow-sm ring-1 ring-white/5 transition hover:border-cbre/40 hover:bg-zinc-900/80 hover:ring-cbre/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
+              className="group flex min-h-[132px] flex-col rounded-2xl border border-zinc-800 bg-zinc-900/50 px-6 py-8 text-left shadow-sm ring-1 ring-white/5 transition hover:border-cbre/40 hover:bg-zinc-900/80 hover:ring-cbre/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
             >
               <span className="text-xs font-semibold uppercase tracking-wider text-cbre-muted">
                 LibreChat
               </span>
               <span className="font-display mt-2 text-lg font-semibold text-zinc-100">
-                Conversational AI &amp; agents
+                Conversational AI And Agents
               </span>
               <span className="mt-2 text-sm leading-snug text-zinc-500">
                 Multi-turn chat, tool use, MCP servers—how teams ship internal
@@ -265,13 +320,13 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open n8n proof of concept at flows.creai.solutions"
-              className="group flex flex-col rounded-2xl border border-zinc-800 bg-zinc-900/50 px-6 py-8 text-left shadow-sm ring-1 ring-white/5 transition hover:border-cbre/40 hover:bg-zinc-900/80 hover:ring-cbre/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
+              className="group flex min-h-[132px] flex-col rounded-2xl border border-zinc-800 bg-zinc-900/50 px-6 py-8 text-left shadow-sm ring-1 ring-white/5 transition hover:border-cbre/40 hover:bg-zinc-900/80 hover:ring-cbre/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
             >
               <span className="text-xs font-semibold uppercase tracking-wider text-cbre-muted">
                 n8n
               </span>
               <span className="font-display mt-2 text-lg font-semibold text-zinc-100">
-                Workflow automation
+                Workflow Automation
               </span>
               <span className="mt-2 text-sm leading-snug text-zinc-500">
                 Orchestration across APIs and systems—repeatable runbooks,
@@ -287,7 +342,7 @@ export default function Home() {
 
           <div className="rounded-xl border border-zinc-800/60 bg-zinc-950/40 px-4 py-4 ring-1 ring-white/[0.03] sm:px-5">
             <p className="text-xs font-semibold uppercase tracking-wider text-zinc-500">
-              What I&apos;m building in this POC
+              What I&apos;m Building In This POC
             </p>
             <ul className="mt-3 space-y-2 text-sm leading-relaxed text-zinc-400">
               <li>
@@ -309,144 +364,168 @@ export default function Home() {
         </section>
 
         <section
-          className="mb-16 rounded-2xl border border-zinc-800/80 bg-zinc-950/40 p-8 ring-1 ring-white/5 sm:p-10"
-          aria-labelledby="ideas-heading"
+          id="section-alignment"
+          className="section-anchor mb-16 rounded-2xl border border-zinc-800/80 bg-zinc-950/40 p-8 ring-1 ring-white/5 sm:p-10"
+          aria-labelledby="alignment-heading"
         >
           <h2
-            id="ideas-heading"
-            className="font-display text-xl font-semibold text-zinc-100"
+            id="alignment-heading"
+            className="font-display text-xl font-semibold text-zinc-100 sm:text-2xl"
           >
-            Ideas to explore together
+            How This Maps To The Role
           </h2>
-          <p className="mt-4 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
-            CBRE&apos;s roadmap and constraints are yours to define—these are{" "}
-            <strong className="font-semibold text-zinc-300">
-              conversation starters
-            </strong>
-            , not instructions. I&apos;m listing hypotheses I&apos;d validate
-            with product, data, engineering, and risk partners so we can quickly
-            separate signal from theater.
+          <p className="mt-4 max-w-2xl text-pretty text-[15px] leading-snug text-zinc-500 sm:text-base">
+            Aligned to the published Head Of AI Products scope—briefly, how my
+            track record maps.
           </p>
-          <ul className="mt-6 space-y-4 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
-            <li className="flex gap-3">
-              <span
-                className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cbre"
-                aria-hidden
-              />
-              <span>
-                <strong className="font-semibold text-zinc-300">
-                  Document-heavy workflows (GenAI):
-                </strong>{" "}
-                Retrieval + citations across leases, OMs, work orders, and
-                tickets—with role-aware access and evaluation gates—often the
-                fastest credible win when data is messy but high-value.
-              </span>
+          <ul className="mt-6 max-w-2xl space-y-3.5 text-pretty text-[15px] leading-snug text-zinc-400 sm:text-base">
+            <li>
+              <strong className="font-semibold text-zinc-300">
+                Roadmap, priorities, and funding conversations
+              </strong>{" "}
+              — Partnered with leadership to sequence agentic platform work tied
+              to{" "}
+              <strong className="font-semibold text-zinc-300">$14M+</strong> in
+              opportunity context and adoption across{" "}
+              <strong className="font-semibold text-zinc-300">150+</strong> teams.
             </li>
-            <li className="flex gap-3">
-              <span
-                className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cbre"
-                aria-hidden
-              />
-              <span>
-                <strong className="font-semibold text-zinc-300">
-                  Agent + MCP patterns:
-                </strong>{" "}
-                Assistants that{" "}
-                <span className="font-medium text-zinc-300">do work</span> via
-                governed tool calls into internal systems, not just chat—paired
-                with logging and human-in-the-loop approvals where outcomes are
-                material.
-              </span>
+            <li>
+              <strong className="font-semibold text-zinc-300">
+                Discovery, experimentation, and success criteria
+              </strong>{" "}
+              — Shipped{" "}
+              <strong className="font-semibold text-zinc-300">50+</strong>{" "}
+              production AI workflows and iterated with stakeholders so wins
+              surfaced in program metrics (
+              <strong className="font-semibold text-zinc-300">~40%</strong>{" "}
+              decision-making improvement where measured).
             </li>
-            <li className="flex gap-3">
-              <span
-                className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cbre"
-                aria-hidden
-              />
-              <span>
-                <strong className="font-semibold text-zinc-300">
-                  Orchestrated operations (n8n-class):
-                </strong>{" "}
-                Repeatable runbooks for facilities, portfolio, or service-line
-                processes—retries, routing, and audit trails—so automation scales
-                without losing the enterprise bar on reliability.
-              </span>
+            <li>
+              <strong className="font-semibold text-zinc-300">
+                GenAI, predictive, and agentic delivery
+              </strong>{" "}
+              — Delivered{" "}
+              <strong className="font-semibold text-zinc-300">2,000+</strong>{" "}
+              API nodes,{" "}
+              <strong className="font-semibold text-zinc-300">1,500+</strong> MCP
+              tools, and{" "}
+              <strong className="font-semibold text-zinc-300">Ludex AI</strong>{" "}
+              (fine-tuning, RAG, vectors, MCP) as repeatable GenAI patterns.
+            </li>
+            <li>
+              <strong className="font-semibold text-zinc-300">
+                Model evaluation, monitoring, and production readiness
+              </strong>{" "}
+              — Built evaluation-friendly agent flows and{" "}
+              <strong className="font-semibold text-zinc-300">21</strong>{" "}
+              production C# connectors (
+              <strong className="font-semibold text-zinc-300">2,500+</strong>{" "}
+              endpoints) with the discipline expected before broad rollout.
+            </li>
+            <li>
+              <strong className="font-semibold text-zinc-300">
+                Governance, privacy, HITL, auditability
+              </strong>{" "}
+              — Designed integrations and demos around traceable tool use,
+              access-aware patterns, and human-in-the-loop where outcomes are
+              material—the same bar I apply before recommending scale.
+            </li>
+            <li>
+              <strong className="font-semibold text-zinc-300">
+                KPIs: quality, safety, adoption, productivity, cost
+              </strong>{" "}
+              — Influenced{" "}
+              <strong className="font-semibold text-zinc-300">$4M ARR</strong>{" "}
+              closed-won; cut implementation errors{" "}
+              <strong className="font-semibold text-zinc-300">~25%</strong> via{" "}
+              <strong className="font-semibold text-zinc-300">15+</strong> guides;
+              tracked adoption signals across a{" "}
+              <strong className="font-semibold text-zinc-300">150+</strong> team
+              footprint.
+            </li>
+            <li>
+              <strong className="font-semibold text-zinc-300">
+                Playbooks and reusable patterns
+              </strong>{" "}
+              — Authored{" "}
+              <strong className="font-semibold text-zinc-300">15+</strong> guides
+              and templates that standardized onboarding and reduced rework.
+            </li>
+            <li>
+              <strong className="font-semibold text-zinc-300">
+                Developing analysts and cross-functional leadership
+              </strong>{" "}
+              — Mentored teammates on AI workflow design; engaged{" "}
+              <strong className="font-semibold text-zinc-300">200+</strong>{" "}
+              stakeholders and presented to{" "}
+              <strong className="font-semibold text-zinc-300">5,000+</strong>{" "}
+              conference attendees to build shared fluency.
             </li>
           </ul>
-          <p className="mt-6 border-t border-zinc-800/80 pt-6 text-sm leading-relaxed text-zinc-500">
-            If this resonates, I&apos;d rather spend our time pressure-testing
-            one or two themes against your reality than debating slide decks—
-            that&apos;s how I tend to turn proof into credible product bets.
-          </p>
-        </section>
 
-        <section
-          className="mb-16"
-          aria-labelledby="videos-heading"
-        >
-          <h2
-            id="videos-heading"
-            className="font-display text-xl font-semibold text-zinc-100"
-          >
-            Selected videos
-          </h2>
-          <p className="mt-3 max-w-2xl text-pretty text-sm leading-relaxed text-zinc-500">
-            Play inline on this page—no tab-hopping. Where a clip is bookmarked,
-            it picks up at that moment. Nothing autoplays; each player loads as
-            you scroll.
-          </p>
-          <div className="mt-8 grid gap-8 md:grid-cols-2">
-            {YOUTUBE_CLIPS.map((clip) => {
-              const watchUrl =
-                clip.start > 0
-                  ? `https://www.youtube.com/watch?v=${clip.id}&t=${clip.start}s`
-                  : `https://www.youtube.com/watch?v=${clip.id}`;
-              const embedSrc =
-                clip.start > 0
-                  ? `https://www.youtube-nocookie.com/embed/${clip.id}?start=${clip.start}`
-                  : `https://www.youtube-nocookie.com/embed/${clip.id}`;
-              return (
-                <figure
-                  key={clip.id}
-                  className="overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950/60 ring-1 ring-white/5"
-                >
-                  <div className="aspect-video w-full bg-black">
-                    <iframe
-                      src={embedSrc}
-                      title={clip.title}
-                      className="h-full w-full"
-                      loading="lazy"
-                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
-                    />
-                  </div>
-                  <figcaption className="flex flex-col gap-2 border-t border-zinc-800/80 px-3 py-3 text-xs sm:flex-row sm:items-start sm:justify-between sm:gap-3">
-                    <span className="min-w-0 flex-1 text-pretty leading-snug text-zinc-300">
-                      {clip.title}
-                    </span>
-                    <a
-                      href={watchUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="shrink-0 self-start font-medium text-cbre-muted underline-offset-4 hover:text-cbre-bright hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
-                    >
-                      Open on YouTube
-                    </a>
-                  </figcaption>
-                </figure>
-              );
-            })}
+          <div className="mt-8 border-t border-zinc-800/80 pt-6">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
+              Example Domains I&apos;d Explore With Your Teams
+            </h3>
+            <p className="mt-3 text-pretty text-sm leading-relaxed text-zinc-500">
+              Retrieval and citations across leases, OMs, work orders, and
+              tickets—with role-aware access and evaluation gates; assistants that
+              execute via governed tool calls with logging and approvals; n8n-class
+              runbooks for facilities and portfolio processes with retries,
+              routing, and audit trails.
+            </p>
           </div>
         </section>
 
         <section
-          className="rounded-2xl border border-zinc-800/80 bg-zinc-950/40 p-8 ring-1 ring-white/5 sm:p-10"
+          id="section-videos"
+          className="section-anchor mb-16"
+          aria-labelledby="videos-heading"
+        >
+          <h2
+            id="videos-heading"
+            className="font-display text-xl font-semibold text-zinc-100 sm:text-2xl"
+          >
+            Selected Videos
+          </h2>
+          <div className="mt-4 max-w-2xl space-y-3 text-pretty text-sm leading-relaxed text-zinc-400 sm:text-[15px]">
+            <p>
+              Short clips from builds and demos—systems integrations, agent
+              tooling, workflow orchestration, MCP gateways, and telemetry. I walk
+              through{" "}
+              <strong className="font-semibold text-zinc-300">
+                architecture choices
+              </strong>
+              , how tools are invoked, and tradeoffs I call out for enterprise
+              audiences—so you can see how I run a technical narrative, not only
+              the UI.
+            </p>
+            <p className="text-zinc-500">
+              Bookmarked clips start mid-demo where helpful. Nothing autoplays;
+              click a thumbnail to load the player. Inline on this page—no
+              tab-hopping.
+            </p>
+          </div>
+          <div className="mt-8 grid gap-8 md:grid-cols-2">
+            {YOUTUBE_CLIPS.map((clip) => (
+              <VideoEmbed
+                key={clip.id}
+                id={clip.id}
+                start={clip.start}
+                title={clip.title}
+              />
+            ))}
+          </div>
+        </section>
+
+        <section
+          id="section-contact"
+          className="section-anchor rounded-2xl border border-zinc-800/80 bg-zinc-950/40 p-8 ring-1 ring-white/5 sm:p-10"
           aria-labelledby="about-heading"
         >
           <h2
             id="about-heading"
-            className="font-display text-xl font-semibold text-zinc-100"
+            className="font-display text-xl font-semibold text-zinc-100 sm:text-2xl"
           >
             About Charley
           </h2>
@@ -456,20 +535,31 @@ export default function Home() {
 
             <div className="min-w-0 flex-1 space-y-5">
               <p className="text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
-                I build AI and automation products end-to-end: clarifying use
-                cases, designing evaluations and guardrails, and shipping
-                experiences people actually adopt. These demos reflect how I
-                think about{" "}
+                I take AI capabilities from an ambiguous problem to defined
+                success criteria, evaluation, and release discipline—then ship
+                experiences teams actually use. I explain tradeoffs clearly to
+                both executives and engineering partners in a matrixed
+                environment. The LibreChat and n8n environments here are
+                deliberately transparent: you can see how I think about{" "}
                 <span className="text-zinc-300">
-                  reliability, traceability, and responsible rollout
+                  traceability, rollback, and responsible rollout
                 </span>{" "}
-                in real enterprise settings.
+                before anyone asks for a roadmap commitment.
               </p>
+
+              <div>
+                <a
+                  href={mailtoHref}
+                  className="inline-flex min-h-[48px] w-full items-center justify-center rounded-xl bg-cbre px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-cbre/25 transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre sm:w-auto"
+                >
+                  Email Charley — Start The Conversation
+                </a>
+              </div>
 
               <div className="flex flex-wrap gap-3">
                 <a
                   href={mailtoHref}
-                  className="inline-flex items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900/60 px-3 py-2 text-sm text-zinc-300 transition hover:border-zinc-700 hover:text-cbre-bright focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
+                  className="inline-flex min-h-[44px] items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900/60 px-3 py-2 text-sm text-zinc-300 transition hover:border-zinc-700 hover:text-cbre-bright focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
                 >
                   <span className="text-zinc-500">
                     <MailIcon />
@@ -514,7 +604,7 @@ export default function Home() {
                   download
                   className="inline-flex items-center gap-2 rounded-xl border border-cbre/35 bg-cbre/15 px-5 py-3 text-sm font-semibold text-cbre-bright transition hover:bg-cbre/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
                 >
-                  Download resume (PDF)
+                  Download Resume (PDF)
                   <svg
                     width="18"
                     height="18"
@@ -537,7 +627,7 @@ export default function Home() {
 
         <footer className="mt-16 space-y-3 text-center text-sm text-zinc-600">
           <p>
-            Demos &amp; site by{" "}
+            Demos And Site By{" "}
             <Link
               href="https://creai.solutions"
               className="text-zinc-500 underline-offset-4 hover:text-cbre-bright hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
@@ -546,6 +636,7 @@ export default function Home() {
             </Link>
             .
           </p>
+          <p className="text-xs text-zinc-600">Last Updated April 2026</p>
           <p className="mx-auto max-w-md text-xs leading-relaxed text-zinc-600">
             CBRE® and related marks are trademarks of CBRE Group, Inc. This page
             is an independent candidate resource for interview discussion and is
@@ -571,7 +662,7 @@ function SocialLink({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900/60 px-3 py-2 text-sm text-zinc-300 transition hover:border-zinc-700 hover:text-cbre-bright focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
+      className="inline-flex min-h-[44px] items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900/60 px-3 py-2 text-sm text-zinc-300 transition hover:border-zinc-700 hover:text-cbre-bright focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
     >
       <span className="text-zinc-500">{children}</span>
       <span>{label}</span>

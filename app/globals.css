@@ -12,6 +12,22 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.section-anchor {
+  scroll-margin-top: 7rem;
+}
+
+@media (min-width: 640px) {
+  .section-anchor {
+    scroll-margin-top: 6.5rem;
+  }
+}
+
 body {
   color: #e4e4e7;
   background: var(--bg-deep);
