@@ -29,7 +29,7 @@ npm start
 
 | File | Purpose |
 |------|---------|
-| `public/cbre-logo.png` | CBRE wordmark (candidate interview context; see footer disclaimer). |
+| `public/cbre-logo.png` | CBRE wordmark—edge-trimmed to hug the letters (no excess canvas). Re-run `node scripts/trim-cbre-logo.mjs` after replacing the source asset (writes backup `cbre-logo-original.png` once; backup is gitignored). |
 | `public/charley-forey-resume-2026.pdf` | Resume download |
 | `public/charley.png` | Profile photo (from `profile_photo.png` or equivalent). If missing, an initials fallback is shown. |
 
