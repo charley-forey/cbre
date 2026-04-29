@@ -209,144 +209,6 @@ export default function Home() {
         </section>
 
         <section
-          id="section-demos"
-          className="section-anchor mb-16 space-y-6"
-          aria-labelledby="demo-links-heading"
-        >
-          <div>
-            <h2
-              id="demo-links-heading"
-              className="font-display text-xl font-semibold text-zinc-100 sm:text-2xl"
-            >
-              Live Proof-Of-Concept Demos
-            </h2>
-            <p className="mt-4 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
-              Two references you can open today:{" "}
-              <strong className="font-semibold text-zinc-300">LibreChat</strong>{" "}
-              for conversational AI and agents,{" "}
-              <strong className="font-semibold text-zinc-300">n8n</strong> for
-              workflow orchestration. These are intentional POCs, not CBRE
-              production. They give us something concrete to react to on
-              integration, governance, and rollout, instead of debating decks.
-            </p>
-            <p className="mt-3 text-pretty text-sm leading-relaxed text-zinc-500 sm:text-[15px]">
-              That pairing is how most enterprises pilot this space: a
-              conversational or agent layer with orchestration behind it. I stay
-              hands-on with delivery so what we discuss maps to what actually
-              ships, not the trend of the quarter.
-            </p>
-          </div>
-
-          <div className="grid min-h-[132px] gap-4 sm:grid-cols-2">
-            <a
-              href={chatUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Open LibreChat proof of concept at chat.creai.solutions"
-              className="group flex min-h-[132px] flex-col rounded-2xl border border-zinc-800 bg-zinc-900/50 px-6 py-8 text-left shadow-sm ring-1 ring-white/5 transition hover:border-cbre/40 hover:bg-zinc-900/80 hover:ring-cbre/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
-            >
-              <span className="text-xs font-semibold uppercase tracking-wider text-cbre-muted">
-                LibreChat
-              </span>
-              <span className="font-display mt-2 text-lg font-semibold text-zinc-100">
-                Conversational AI And Agents
-              </span>
-              <span className="mt-2 text-sm leading-snug text-zinc-500">
-                Multi-turn chat, tool use, MCP servers. How teams ship copilots
-                and grounded assistance with evaluation hooks.
-              </span>
-              <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-cbre-bright">
-                chat.creai.solutions
-                <ExternalIcon className="opacity-70 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </span>
-            </a>
-            <a
-              href={flowsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Open n8n proof of concept at flows.creai.solutions"
-              className="group flex min-h-[132px] flex-col rounded-2xl border border-zinc-800 bg-zinc-900/50 px-6 py-8 text-left shadow-sm ring-1 ring-white/5 transition hover:border-cbre/40 hover:bg-zinc-900/80 hover:ring-cbre/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
-            >
-              <span className="text-xs font-semibold uppercase tracking-wider text-cbre-muted">
-                n8n
-              </span>
-              <span className="font-display mt-2 text-lg font-semibold text-zinc-100">
-                Workflow Automation
-              </span>
-              <span className="mt-2 text-sm leading-snug text-zinc-500">
-                Orchestration across APIs and systems: runbooks, hand-offs, and
-                logs before anything touches prod-scale SLAs.
-              </span>
-              <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-cbre-bright">
-                flows.creai.solutions
-                <ExternalIcon className="opacity-70 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </span>
-            </a>
-          </div>
-
-          <div className="rounded-xl border border-cbre/25 bg-cbre/10 px-4 py-4 ring-1 ring-cbre/20 sm:px-5">
-            <p className="text-xs font-semibold uppercase tracking-wider text-cbre-muted">
-              Demo Access
-            </p>
-            <dl className="mt-3 space-y-3 text-sm leading-relaxed text-zinc-400">
-              <div>
-                <dt className="font-semibold text-zinc-300">LibreChat</dt>
-                <dd className="mt-1">
-                  Create your own account on the sign-in screen to explore the
-                  POC. No shared password required.
-                </dd>
-              </div>
-              <div>
-                <dt className="font-semibold text-zinc-300">n8n</dt>
-                <dd className="mt-1 space-y-2">
-                  <p>
-                    This instance uses a shared login (not open self-signup).
-                    Use:
-                  </p>
-                  <ul className="list-inside list-disc space-y-1 text-zinc-400">
-                    <li>
-                      <span className="font-medium text-zinc-400">Email: </span>
-                      <code className="rounded bg-zinc-950/80 px-1.5 py-0.5 font-mono text-[13px] text-cbre-bright">
-                        {CONTACT_EMAIL}
-                      </code>
-                    </li>
-                    <li>
-                      <span className="font-medium text-zinc-400">
-                        Password:{" "}
-                      </span>
-                      <code className="rounded bg-zinc-950/80 px-1.5 py-0.5 font-mono text-[13px] text-cbre-bright">
-                        {N8N_DEMO_PASSWORD}
-                      </code>
-                    </li>
-                  </ul>
-                  <p className="text-xs text-zinc-600">
-                    POC demo login only, not a secured environment.
-                  </p>
-                </dd>
-              </div>
-            </dl>
-          </div>
-
-          <div className="rounded-xl border border-zinc-800/60 bg-zinc-950/40 px-4 py-4 ring-1 ring-white/[0.03] sm:px-5">
-            <p className="text-xs font-semibold uppercase tracking-wider text-zinc-500">
-              What This POC Shows
-            </p>
-            <ul className="mt-3 space-y-2 text-sm leading-relaxed text-zinc-400">
-              <li>
-                <span className="font-medium text-cbre-muted">LibreChat: </span>
-                Agents and MCP hooks framed the way I pilot grounded GenAI:
-                traceable tool calls and room to judge product sense, not slides.
-              </li>
-              <li>
-                <span className="font-medium text-cbre-muted">n8n: </span>
-                Cross-system flows with clear ownership between steps. A fast way
-                to show orchestration before we fund platform-wide rollout.
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <section
           id="section-alignment"
           className="section-anchor mb-16 rounded-2xl border border-zinc-800/80 bg-zinc-950/40 p-6 ring-1 ring-white/5 sm:p-8"
           aria-labelledby="alignment-heading"
@@ -530,6 +392,144 @@ export default function Home() {
               Open full profile on GitHub
             </a>
           </p>
+        </section>
+
+        <section
+          id="section-demos"
+          className="section-anchor mb-16 space-y-6"
+          aria-labelledby="demo-links-heading"
+        >
+          <div>
+            <h2
+              id="demo-links-heading"
+              className="font-display text-xl font-semibold text-zinc-100 sm:text-2xl"
+            >
+              Live Proof-Of-Concept Demos
+            </h2>
+            <p className="mt-4 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
+              Two references you can open today:{" "}
+              <strong className="font-semibold text-zinc-300">LibreChat</strong>{" "}
+              for conversational AI and agents,{" "}
+              <strong className="font-semibold text-zinc-300">n8n</strong> for
+              workflow orchestration. These are intentional POCs, not CBRE
+              production. They give us something concrete to react to on
+              integration, governance, and rollout, instead of debating decks.
+            </p>
+            <p className="mt-3 text-pretty text-sm leading-relaxed text-zinc-500 sm:text-[15px]">
+              That pairing is how most enterprises pilot this space: a
+              conversational or agent layer with orchestration behind it. I stay
+              hands-on with delivery so what we discuss maps to what actually
+              ships, not the trend of the quarter.
+            </p>
+          </div>
+
+          <div className="grid min-h-[132px] gap-4 sm:grid-cols-2">
+            <a
+              href={chatUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open LibreChat proof of concept at chat.creai.solutions"
+              className="group flex min-h-[132px] flex-col rounded-2xl border border-zinc-800 bg-zinc-900/50 px-6 py-8 text-left shadow-sm ring-1 ring-white/5 transition hover:border-cbre/40 hover:bg-zinc-900/80 hover:ring-cbre/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
+            >
+              <span className="text-xs font-semibold uppercase tracking-wider text-cbre-muted">
+                LibreChat
+              </span>
+              <span className="font-display mt-2 text-lg font-semibold text-zinc-100">
+                Conversational AI And Agents
+              </span>
+              <span className="mt-2 text-sm leading-snug text-zinc-500">
+                Multi-turn chat, tool use, MCP servers. How teams ship copilots
+                and grounded assistance with evaluation hooks.
+              </span>
+              <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-cbre-bright">
+                chat.creai.solutions
+                <ExternalIcon className="opacity-70 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </span>
+            </a>
+            <a
+              href={flowsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open n8n proof of concept at flows.creai.solutions"
+              className="group flex min-h-[132px] flex-col rounded-2xl border border-zinc-800 bg-zinc-900/50 px-6 py-8 text-left shadow-sm ring-1 ring-white/5 transition hover:border-cbre/40 hover:bg-zinc-900/80 hover:ring-cbre/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
+            >
+              <span className="text-xs font-semibold uppercase tracking-wider text-cbre-muted">
+                n8n
+              </span>
+              <span className="font-display mt-2 text-lg font-semibold text-zinc-100">
+                Workflow Automation
+              </span>
+              <span className="mt-2 text-sm leading-snug text-zinc-500">
+                Orchestration across APIs and systems: runbooks, hand-offs, and
+                logs before anything touches prod-scale SLAs.
+              </span>
+              <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-cbre-bright">
+                flows.creai.solutions
+                <ExternalIcon className="opacity-70 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </span>
+            </a>
+          </div>
+
+          <div className="rounded-xl border border-cbre/25 bg-cbre/10 px-4 py-4 ring-1 ring-cbre/20 sm:px-5">
+            <p className="text-xs font-semibold uppercase tracking-wider text-cbre-muted">
+              Demo Access
+            </p>
+            <dl className="mt-3 space-y-3 text-sm leading-relaxed text-zinc-400">
+              <div>
+                <dt className="font-semibold text-zinc-300">LibreChat</dt>
+                <dd className="mt-1">
+                  Create your own account on the sign-in screen to explore the
+                  POC. No shared password required.
+                </dd>
+              </div>
+              <div>
+                <dt className="font-semibold text-zinc-300">n8n</dt>
+                <dd className="mt-1 space-y-2">
+                  <p>
+                    This instance uses a shared login (not open self-signup).
+                    Use:
+                  </p>
+                  <ul className="list-inside list-disc space-y-1 text-zinc-400">
+                    <li>
+                      <span className="font-medium text-zinc-400">Email: </span>
+                      <code className="rounded bg-zinc-950/80 px-1.5 py-0.5 font-mono text-[13px] text-cbre-bright">
+                        {CONTACT_EMAIL}
+                      </code>
+                    </li>
+                    <li>
+                      <span className="font-medium text-zinc-400">
+                        Password:{" "}
+                      </span>
+                      <code className="rounded bg-zinc-950/80 px-1.5 py-0.5 font-mono text-[13px] text-cbre-bright">
+                        {N8N_DEMO_PASSWORD}
+                      </code>
+                    </li>
+                  </ul>
+                  <p className="text-xs text-zinc-600">
+                    POC demo login only, not a secured environment.
+                  </p>
+                </dd>
+              </div>
+            </dl>
+          </div>
+
+          <div className="rounded-xl border border-zinc-800/60 bg-zinc-950/40 px-4 py-4 ring-1 ring-white/[0.03] sm:px-5">
+            <p className="text-xs font-semibold uppercase tracking-wider text-zinc-500">
+              What This POC Shows
+            </p>
+            <ul className="mt-3 space-y-2 text-sm leading-relaxed text-zinc-400">
+              <li>
+                <span className="font-medium text-cbre-muted">LibreChat: </span>
+                Agents and MCP hooks framed the way I pilot grounded GenAI:
+                traceable tool calls and room to judge product sense, not slides.
+              </li>
+              <li>
+                <span className="font-medium text-cbre-muted">n8n: </span>
+                Cross-system flows with clear ownership between steps. A fast way
+                to show orchestration before we fund platform-wide rollout.
+              </li>
+            </ul>
+          </div>
         </section>
 
         <section
