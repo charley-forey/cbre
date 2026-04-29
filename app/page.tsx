@@ -145,70 +145,6 @@ export default function Home() {
         </header>
 
         <section
-          id="section-proof"
-          className="section-anchor mb-14"
-          aria-labelledby="proof-heading"
-        >
-          <h2
-            id="proof-heading"
-            className="font-display text-xl font-semibold text-zinc-100 sm:text-2xl"
-          >
-            Proof Points
-          </h2>
-          <ul className="mt-5 space-y-5">
-            <li className="flex gap-3 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
-              <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-cbre" />
-              <span>
-                <strong className="font-semibold text-zinc-300">
-                  Trimble · Principal AI Solutions Architect (Agentic AI Platform)
-                </strong>
-                <br />
-                <span className="text-zinc-300">
-                  2,000+ API nodes · 1,500+ MCP tools · 50+ production workflows ·
-                  $14M+ opportunity scope · 150+ teams · ~40% decision lift
-                  (program metrics).
-                </span>{" "}
-                Outcomes first, then platform scale: adoption and measurable
-                decision improvement across internal and external teams; pipeline
-                figures are opportunity context, not booked revenue.
-              </span>
-            </li>
-            <li className="flex gap-3 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
-              <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-cbre" />
-              <span>
-                <strong className="font-semibold text-zinc-300">
-                  Revenue And Enablement
-                </strong>
-                <br />
-                <span className="text-zinc-300">
-                  $4M ARR influenced · 200+ stakeholders · 15+ guides and
-                  templates · ~25% fewer implementation errors · 4 conferences ·
-                  5,000+ attendees.
-                </span>{" "}
-                Alignment work that closes revenue, plus assets that scale
-                adoption and reduce rework.
-              </span>
-            </li>
-            <li className="flex gap-3 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
-              <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-cbre" />
-              <span>
-                <strong className="font-semibold text-zinc-300">
-                  Integrations And GenAI Engineering
-                </strong>
-                <br />
-                <span className="text-zinc-300">
-                  21 production C# connectors · 2,500+ endpoints · $10M+ pipeline
-                  · $4M+ proposed dev scope · Ludex AI (fine-tuning, RAG,
-                  vectors, MCP).
-                </span>{" "}
-                Production plumbing plus an end-to-end GenAI product pattern I
-                reuse for enterprise delivery.
-              </span>
-            </li>
-          </ul>
-        </section>
-
-        <section
           id="section-alignment"
           className="section-anchor mb-16 rounded-2xl border border-zinc-800/80 bg-zinc-950/40 p-6 ring-1 ring-white/5 sm:p-8"
           aria-labelledby="alignment-heading"
@@ -217,7 +153,7 @@ export default function Home() {
             id="alignment-heading"
             className="font-display text-xl font-semibold text-zinc-100 sm:text-2xl"
           >
-            How This Maps To The Role
+            How I Map To The Role
           </h2>
           <p className="mt-3 max-w-2xl text-pretty text-sm leading-snug text-zinc-500">
             Head Of AI Products scope in brief: where my track record shows up.
@@ -530,6 +466,70 @@ export default function Home() {
               </li>
             </ul>
           </div>
+        </section>
+
+        <section
+          id="section-proof"
+          className="section-anchor mb-14"
+          aria-labelledby="proof-heading"
+        >
+          <h2
+            id="proof-heading"
+            className="font-display text-xl font-semibold text-zinc-100 sm:text-2xl"
+          >
+            Proof Points
+          </h2>
+          <ul className="mt-5 space-y-5">
+            <li className="flex gap-3 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
+              <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-cbre" />
+              <span>
+                <strong className="font-semibold text-zinc-300">
+                  Trimble · Principal AI Solutions Architect (Agentic AI Platform)
+                </strong>
+                <br />
+                <span className="text-zinc-300">
+                  2,000+ API nodes · 1,500+ MCP tools · 50+ production workflows ·
+                  $14M+ opportunity scope · 150+ teams · ~40% decision lift
+                  (program metrics).
+                </span>{" "}
+                Outcomes first, then platform scale: adoption and measurable
+                decision improvement across internal and external teams; pipeline
+                figures are opportunity context, not booked revenue.
+              </span>
+            </li>
+            <li className="flex gap-3 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
+              <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-cbre" />
+              <span>
+                <strong className="font-semibold text-zinc-300">
+                  Revenue And Enablement
+                </strong>
+                <br />
+                <span className="text-zinc-300">
+                  $4M ARR influenced · 200+ stakeholders · 15+ guides and
+                  templates · ~25% fewer implementation errors · 4 conferences ·
+                  5,000+ attendees.
+                </span>{" "}
+                Alignment work that closes revenue, plus assets that scale
+                adoption and reduce rework.
+              </span>
+            </li>
+            <li className="flex gap-3 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
+              <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-cbre" />
+              <span>
+                <strong className="font-semibold text-zinc-300">
+                  Integrations And GenAI Engineering
+                </strong>
+                <br />
+                <span className="text-zinc-300">
+                  21 production C# connectors · 2,500+ endpoints · $10M+ pipeline
+                  · $4M+ proposed dev scope · Ludex AI (fine-tuning, RAG,
+                  vectors, MCP).
+                </span>{" "}
+                Production plumbing plus an end-to-end GenAI product pattern I
+                reuse for enterprise delivery.
+              </span>
+            </li>
+          </ul>
         </section>
 
         <section
