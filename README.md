@@ -17,6 +17,7 @@ Open [http://localhost:3000](http://localhost:3000).
 2. In [Vercel](https://vercel.com), **Add New Project** and import the repo.
 3. Framework preset: **Next.js**. Root directory: `.` (repository root).
 4. Set `NEXT_PUBLIC_SITE_URL` to your canonical production URL (e.g. `https://your-domain.vercel.app`) so Open Graph `metadataBase` and social previews resolve correctly. If unset, the build falls back to `VERCEL_URL` when present, then localhost for local builds.
+5. Optional: set `NEXT_PUBLIC_N8N_DEMO_PASSWORD` in Vercel **Environment Variables** so the landing page can show the shared n8n demo password (same value as in your local `.env.local`). Do **not** commit passwords in git; `.env*.local` is gitignored. `NEXT_PUBLIC_*` values are visible in the browser to anyone who loads the site (fine for a shared POC login; rotate if the URL is leaked).
 
 Production build locally:
 

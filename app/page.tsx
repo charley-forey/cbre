@@ -15,6 +15,10 @@ const mailtoHref = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
   "CBRE - Head of AI Products",
 )}`;
 
+/** Shown for n8n POC; set via NEXT_PUBLIC_N8N_DEMO_PASSWORD in Vercel or .env.local (never commit). */
+const n8nDemoPassword =
+  process.env.NEXT_PUBLIC_N8N_DEMO_PASSWORD?.trim() ?? "";
+
 /** Embeds start at bookmarked timestamps; titles match YouTube */
 const YOUTUBE_CLIPS: { id: string; start: number; title: string }[] = [
   {
@@ -292,6 +296,68 @@ export default function Home() {
                 <ExternalIcon className="opacity-70 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </span>
             </a>
+          </div>
+
+          <div className="rounded-xl border border-cbre/25 bg-cbre/10 px-4 py-4 ring-1 ring-cbre/20 sm:px-5">
+            <p className="text-xs font-semibold uppercase tracking-wider text-cbre-muted">
+              Demo Access
+            </p>
+            <dl className="mt-3 space-y-3 text-sm leading-relaxed text-zinc-400">
+              <div>
+                <dt className="font-semibold text-zinc-300">LibreChat</dt>
+                <dd className="mt-1">
+                  Create your own account on the sign-in screen to explore the
+                  POC. No shared password required.
+                </dd>
+              </div>
+              <div>
+                <dt className="font-semibold text-zinc-300">n8n</dt>
+                <dd className="mt-1 space-y-2">
+                  <p>
+                    This instance uses a shared login (not open self-signup).
+                    Use:
+                  </p>
+                  <ul className="list-inside list-disc space-y-1 text-zinc-400">
+                    <li>
+                      <span className="font-medium text-zinc-400">Email: </span>
+                      <code className="rounded bg-zinc-950/80 px-1.5 py-0.5 font-mono text-[13px] text-cbre-bright">
+                        {CONTACT_EMAIL}
+                      </code>
+                    </li>
+                    <li>
+                      <span className="font-medium text-zinc-400">
+                        Password:{" "}
+                      </span>
+                      {n8nDemoPassword ? (
+                        <code className="rounded bg-zinc-950/80 px-1.5 py-0.5 font-mono text-[13px] text-cbre-bright">
+                          {n8nDemoPassword}
+                        </code>
+                      ) : (
+                        <span className="text-zinc-500">
+                          Set{" "}
+                          <code className="rounded bg-zinc-900 px-1 font-mono text-xs text-zinc-400">
+                            NEXT_PUBLIC_N8N_DEMO_PASSWORD
+                          </code>{" "}
+                          in Vercel (or{" "}
+                          <code className="rounded bg-zinc-900 px-1 font-mono text-xs text-zinc-400">
+                            .env.local
+                          </code>{" "}
+                          locally). See{" "}
+                          <code className="rounded bg-zinc-900 px-1 font-mono text-xs text-zinc-400">
+                            .env.example
+                          </code>
+                          .
+                        </span>
+                      )}
+                    </li>
+                  </ul>
+                  <p className="text-xs text-zinc-600">
+                    Shared demo credentials are fine for reviewers; rotate if this
+                    URL is ever posted broadly.
+                  </p>
+                </dd>
+              </div>
+            </dl>
           </div>
 
           <div className="rounded-xl border border-zinc-800/60 bg-zinc-950/40 px-4 py-4 ring-1 ring-white/[0.03] sm:px-5">
