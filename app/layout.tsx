@@ -21,10 +21,10 @@ const siteUrlRaw =
 const siteUrl = siteUrlRaw ?? "http://localhost:3000";
 
 const pageTitle =
-  "Head Of AI Products | Charley Forey · CBRE Conversation";
+  "Head of AI Products | Charley Forey · CBRE Conversation";
 
 const description =
-  "Conversation with CBRE on Head Of AI Products: live demos of conversational AI and workflow automation, role alignment, and enterprise AI product delivery background.";
+  "Conversation with CBRE on Head of AI Products: live demos of conversational AI and workflow automation, role alignment, and enterprise AI product delivery background.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         url: "/og-cbre-conversation.png",
         width: 1200,
         height: 630,
-        alt: "Head Of AI Products | Charley Forey | Live demos and role conversation",
+        alt: "Head of AI Products | Charley Forey | Live demos and role conversation",
       },
     ],
     locale: "en_US",
