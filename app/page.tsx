@@ -11,32 +11,36 @@ const mailtoHref = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
   "CBRE — Head of AI Products",
 )}`;
 
-/** Embeds start at the same timestamps as your shared watch links */
-const YOUTUBE_CLIPS: { id: string; start: number; caption: string }[] = [
+/** Embeds start at bookmarked timestamps; titles match YouTube */
+const YOUTUBE_CLIPS: { id: string; start: number; title: string }[] = [
   {
     id: "aGhIXDtRxoU",
     start: 40,
-    caption: "Clip 1",
+    title:
+      "Procore + P6 + Power BI Integration | Real Construction Analytics Using Azure & Cosmos DB",
   },
   {
     id: "vwLcu0ck7ik",
     start: 88,
-    caption: "Clip 2",
+    title:
+      "AI Sales Automations with Zapier | HubSpot, Gmail, Calendar, OpenAI, and AI Agents",
   },
   {
     id: "MZ5WsAj8gB0",
     start: 65,
-    caption: "Clip 3",
+    title:
+      "BuildFlows n8n Nodes Demo – Automating Procore, Autodesk, HCSS, and PowerBI Workflows",
   },
   {
     id: "QJjYrZF2RVQ",
     start: 106,
-    caption: "Clip 4",
+    title:
+      "Construct.Chat Demo: Building AI Agents for Construction with MCP Tools, Live Project Data & Procore",
   },
   {
     id: "siY2zfgmupI",
     start: 0,
-    caption: "Clip 5",
+    title: "Tool Runtime – MCP Gateway & Telemetry | Full Demo & Overview",
   },
 ];
 
@@ -387,9 +391,9 @@ export default function Home() {
             Selected videos
           </h2>
           <p className="mt-3 max-w-2xl text-pretty text-sm leading-relaxed text-zinc-500">
-            Embedded so you can watch in-page—each player starts at the
-            timestamp from the links you chose. Nothing autoplays; iframes load
-            lazily to keep the page snappy.
+            Play inline on this page—no tab-hopping. Where a clip is bookmarked,
+            it picks up at that moment. Nothing autoplays; each player loads as
+            you scroll.
           </p>
           <div className="mt-8 grid gap-8 md:grid-cols-2">
             {YOUTUBE_CLIPS.map((clip) => {
@@ -409,7 +413,7 @@ export default function Home() {
                   <div className="aspect-video w-full bg-black">
                     <iframe
                       src={embedSrc}
-                      title={`Charley Forey — ${clip.caption}`}
+                      title={clip.title}
                       className="h-full w-full"
                       loading="lazy"
                       allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -417,13 +421,15 @@ export default function Home() {
                       allowFullScreen
                     />
                   </div>
-                  <figcaption className="flex flex-wrap items-center justify-between gap-2 border-t border-zinc-800/80 px-3 py-2.5 text-xs text-zinc-500">
-                    <span className="text-zinc-400">{clip.caption}</span>
+                  <figcaption className="flex flex-col gap-2 border-t border-zinc-800/80 px-3 py-3 text-xs sm:flex-row sm:items-start sm:justify-between sm:gap-3">
+                    <span className="min-w-0 flex-1 text-pretty leading-snug text-zinc-300">
+                      {clip.title}
+                    </span>
                     <a
                       href={watchUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-medium text-cbre-muted underline-offset-4 hover:text-cbre-bright hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
+                      className="shrink-0 self-start font-medium text-cbre-muted underline-offset-4 hover:text-cbre-bright hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
                     >
                       Open on YouTube
                     </a>

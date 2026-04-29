@@ -35,7 +35,7 @@ npm start
 
 ## Selected videos
 
-Embedded YouTube players live in `app/page.tsx` (`YOUTUBE_CLIPS`): IDs, `start` seconds, and optional captions. Uses `youtube-nocookie.com` embeds with `loading="lazy"` on iframes.
+Embedded YouTube players live in `app/page.tsx` (`YOUTUBE_CLIPS`): video IDs, `start` seconds, and `title` (matches YouTube). Uses `youtube-nocookie.com` embeds with `loading="lazy"` on iframes.
 
 ## Favicon & tab title
 
