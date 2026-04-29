@@ -216,7 +216,7 @@ export default function Home() {
                   <LinkedInIcon />
                 </SocialLink>
                 <SocialLink
-                  href="https://github.com/charley-forey-ai"
+                  href="https://github.com/Charley-Forey-AI?tab=repositories"
                   label="GitHub"
                 >
                   <GitHubIcon />
