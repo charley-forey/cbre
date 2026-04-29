@@ -15,9 +15,8 @@ const mailtoHref = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
   "CBRE - Head of AI Products",
 )}`;
 
-/** Shown for n8n POC; set via NEXT_PUBLIC_N8N_DEMO_PASSWORD in Vercel or .env.local (never commit). */
-const n8nDemoPassword =
-  process.env.NEXT_PUBLIC_N8N_DEMO_PASSWORD?.trim() ?? "";
+/** Shared n8n POC login (non-production demo). */
+const N8N_DEMO_PASSWORD = "abc123XYZ$";
 
 /** Embeds start at bookmarked timestamps; titles match YouTube */
 const YOUTUBE_CLIPS: { id: string; start: number; title: string }[] = [
@@ -315,32 +314,13 @@ export default function Home() {
                       <span className="font-medium text-zinc-400">
                         Password:{" "}
                       </span>
-                      {n8nDemoPassword ? (
-                        <code className="rounded bg-zinc-950/80 px-1.5 py-0.5 font-mono text-[13px] text-cbre-bright">
-                          {n8nDemoPassword}
-                        </code>
-                      ) : (
-                        <span className="text-zinc-500">
-                          Set{" "}
-                          <code className="rounded bg-zinc-900 px-1 font-mono text-xs text-zinc-400">
-                            NEXT_PUBLIC_N8N_DEMO_PASSWORD
-                          </code>{" "}
-                          in Vercel (or{" "}
-                          <code className="rounded bg-zinc-900 px-1 font-mono text-xs text-zinc-400">
-                            .env.local
-                          </code>{" "}
-                          locally). See{" "}
-                          <code className="rounded bg-zinc-900 px-1 font-mono text-xs text-zinc-400">
-                            .env.example
-                          </code>
-                          .
-                        </span>
-                      )}
+                      <code className="rounded bg-zinc-950/80 px-1.5 py-0.5 font-mono text-[13px] text-cbre-bright">
+                        {N8N_DEMO_PASSWORD}
+                      </code>
                     </li>
                   </ul>
                   <p className="text-xs text-zinc-600">
-                    Shared demo credentials are fine for reviewers; rotate if this
-                    URL is ever posted broadly.
+                    POC demo login only, not a secured environment.
                   </p>
                 </dd>
               </div>
