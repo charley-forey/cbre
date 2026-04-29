@@ -222,32 +222,19 @@ export default function Home() {
               Live Proof-Of-Concept Demos
             </h2>
             <p className="mt-4 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
-              These are{" "}
-              <strong className="font-semibold text-zinc-300">
-                lightweight POCs
-              </strong>{" "}
-              to show what is possible, not CBRE production systems. I run{" "}
+              Two references you can open today:{" "}
               <strong className="font-semibold text-zinc-300">LibreChat</strong>{" "}
-              and{" "}
-              <strong className="font-semibold text-zinc-300">n8n</strong>{" "}
-              end-to-end so you can feel conversational AI plus workflow
-              orchestration against real integration patterns and governance
-              expectations.
+              for conversational AI and agents,{" "}
+              <strong className="font-semibold text-zinc-300">n8n</strong> for
+              workflow orchestration. These are intentional POCs, not CBRE
+              production. They give us something concrete to react to on
+              integration, governance, and rollout, instead of debating decks.
             </p>
-            <p className="mt-3 text-sm leading-relaxed text-zinc-500">
-              <span className="font-semibold text-zinc-400">
-                Why These Stacks:{" "}
-              </span>
-              Same chat or agent layer plus orchestration combo enterprises often
-              pilot. It keeps the conversation anchored to patterns you can map
-              to your roadmap.
-            </p>
-            <p className="mt-4 text-pretty text-sm leading-relaxed text-zinc-500">
-              I stay current across the vendor and open-source AI landscape and
-              ship code daily in{" "}
-              <strong className="font-medium text-zinc-400">Cursor</strong> (plus
-              the usual polyglot stack). Point me at the outcome and we can
-              design and implement the right pattern, not just the loudest brand.
+            <p className="mt-3 text-pretty text-sm leading-relaxed text-zinc-500 sm:text-[15px]">
+              That pairing is how most enterprises pilot this space: a
+              conversational or agent layer with orchestration behind it. I stay
+              hands-on with delivery so what we discuss maps to what actually
+              ships, not the trend of the quarter.
             </p>
           </div>
 
