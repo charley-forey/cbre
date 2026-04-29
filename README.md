@@ -33,6 +33,11 @@ npm start
 | `public/charley-forey-resume-2026.pdf` | Resume download |
 | `public/charley.png` | Profile photo (from `profile_photo.png` or equivalent). If missing, an initials fallback is shown. |
 
+## Favicon & tab title
+
+- Browser tab title is set in `app/layout.tsx` (`metadata.title`).
+- Favicon / app icons: [`app/icon.png`](app/icon.png) and [`app/apple-icon.png`](app/apple-icon.png) are derived from the profile photo; update `public/charley.png` and recopy if you change your headshot.
+
 ## Repository notes
 
 Confidential role specification and duplicate resume copies in the project root are listed in `.gitignore` so they are not committed by mistake. The resume served on the site is the copy under `public/`.

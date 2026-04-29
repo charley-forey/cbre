@@ -19,19 +19,25 @@ const siteUrl =
     ? `https://${process.env.VERCEL_URL}`
     : process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
+const pageTitle =
+  "Head of AI Products | Charley Forey · CBRE conversation";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "CBRE × AI — Charley Forey",
+  title: {
+    default: pageTitle,
+    template: "%s · Charley Forey",
+  },
   description:
     "Conversation with CBRE on Head of AI Products: live demos of conversational AI and workflow automation, plus background on experience in enterprise AI product delivery.",
   openGraph: {
-    title: "CBRE × AI — Charley Forey",
+    title: pageTitle,
     description:
       "Live demos and context for the Head of AI Products conversation at CBRE.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "CBRE × AI — Charley Forey",
+    title: pageTitle,
     description:
       "Live demos and context for the Head of AI Products conversation at CBRE.",
   },

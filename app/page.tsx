@@ -6,6 +6,17 @@ import type { ReactNode } from "react";
 const chatUrl = "https://chat.creai.solutions";
 const flowsUrl = "https://flows.creai.solutions";
 
+const CONTACT_EMAIL = "charley.s.forey@gmail.com";
+const mailtoHref = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+  "CBRE — Head of AI Products",
+)}`;
+
+const PROOF_POINTS = [
+  "Shipped AI and automation initiatives from discovery through adoption—pairing clear success metrics with evaluation harnesses and staged rollout so stakeholders trust what goes live.",
+  "Worked across product, data science, and engineering to define the full model lifecycle: selection criteria, monitoring, retraining triggers, and production readiness checkpoints.",
+  "Embedded responsible-AI practice—human-in-the-loop, auditability, and vendor/tooling standards—so GenAI and agentic workflows stay explainable and governable at enterprise scale.",
+];
+
 function ExternalIcon({ className }: { className?: string }) {
   return (
     <svg
@@ -73,6 +84,29 @@ export default function Home() {
             insight, and agentic automation land where they actually matter.
           </p>
         </header>
+
+        <section
+          className="mb-14"
+          aria-labelledby="proof-heading"
+        >
+          <h2
+            id="proof-heading"
+            className="font-display text-lg font-semibold text-zinc-100"
+          >
+            Proof points
+          </h2>
+          <ul className="mt-5 space-y-3.5">
+            {PROOF_POINTS.map((text, i) => (
+              <li
+                key={i}
+                className="flex gap-3 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base"
+              >
+                <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-cbre" />
+                <span>{text}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
 
         <section
           className="mb-20 space-y-4"
@@ -166,6 +200,15 @@ export default function Home() {
               </p>
 
               <div className="flex flex-wrap gap-3">
+                <a
+                  href={mailtoHref}
+                  className="inline-flex items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900/60 px-3 py-2 text-sm text-zinc-300 transition hover:border-zinc-700 hover:text-cbre-bright focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
+                >
+                  <span className="text-zinc-500">
+                    <MailIcon />
+                  </span>
+                  <span>{CONTACT_EMAIL}</span>
+                </a>
                 <SocialLink
                   href="https://www.linkedin.com/in/charley-forey"
                   label="LinkedIn"
@@ -260,6 +303,44 @@ function SocialLink({
       <span className="text-zinc-500">{children}</span>
       <span>{label}</span>
     </a>
+  );
+}
+
+function CheckIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.25"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+    >
+      <polyline points="20 6 9 17 4 12" />
+    </svg>
+  );
+}
+
+function MailIcon() {
+  return (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+    >
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+      <polyline points="22,6 12,13 2,6" />
+    </svg>
   );
 }
 
