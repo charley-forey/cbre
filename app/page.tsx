@@ -550,25 +550,35 @@ export default function Home() {
             <div className="min-w-0 flex-1 space-y-5">
               <div className="space-y-4 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
                 <p>
-                  I am strongest when the mandate is ambiguous: turn intent into
-                  success criteria, sequencing, and releases that risk, security,
-                  and operations can stand behind. I carry one coherent story from
-                  executive forums to engineering reviews: tradeoffs, timelines,
-                  capital discipline, and where we deliberately say no.
+                  I am at my best when leaders are ready to sharpen the mandate:
+                  turn ambition into priorities, success measures, and a release
+                  rhythm that risk, security, and operations can champion with you.
+                  I carry one narrative from the executive room to the delivery
+                  room so strategy and execution reinforce each other and keep
+                  compounding.
                 </p>
                 <p>
-                  My background is enterprise AI and automation at scale: adoption
-                  across large internal and external footprints, platform work tied
-                  to revenue and pipeline reality, and playbooks that reduce
-                  failure modes so adoption sticks. That is the muscle Head of AI
-                  Products demands: judgment under uncertainty, measurable
-                  outcomes, and governance baked into the product, not bolted on
-                  after the fact.
+                  Head of AI Products is an owner role: choosing which AI
+                  investments to fund, how to prove value, and how to scale with
+                  resilience as velocity grows. My career has been that blend at
+                  enterprise scale: sound judgment, hands-on delivery, and the
+                  cross-functional trust that lets global organizations advance
+                  together with confidence.
                 </p>
                 <p>
-                  The LibreChat and n8n links above are deliberately open. Inspect
-                  how I operate before we argue about a roadmap. I would rather
-                  earn trust through transparency than sell it in a deck.
+                  Partnership runs through everything I do. I am direct,
+                  collaborative, and accountable. I surface choices early, keep
+                  teams aligned on what matters most, and invest deeply in the
+                  success of every leader and builder beside me. Lasting AI
+                  capability grows from shared momentum, clarity, and mutual
+                  respect.
+                </p>
+                <p>
+                  I thrive alongside executives who elevate both the business
+                  story and the engineering bar. I bring focused energy to your
+                  priorities, your operating reality, and the excellence we can
+                  define together. I would be honored to advance this work with
+                  you and help shape what comes next.
                 </p>
               </div>
 
