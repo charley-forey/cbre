@@ -125,13 +125,12 @@ export default function Home() {
             Roadmap Thinking, Live Demos, And Operating Rhythm
           </p>
           <p className="mx-auto mt-8 max-w-xl text-pretty text-base leading-relaxed text-zinc-400 sm:text-[17px]">
-            Enterprise AI product leadership is turning ambiguous opportunities
-            into{" "}
+            Enterprise AI product leadership turns ambiguous opportunities into{" "}
             <span className="text-zinc-300">
               safe, measurable capabilities
             </span>
-            : clear success criteria from discovery through adoption, working
-            across product, data, engineering, and governance so{" "}
+            : crisp success criteria from discovery through adoption, with product,
+            data, engineering, and governance aligned end-to-end. That is how{" "}
             <strong className="font-semibold text-zinc-300">GenAI</strong>,{" "}
             <strong className="font-semibold text-zinc-300">
               predictive insight
@@ -140,7 +139,8 @@ export default function Home() {
             <strong className="font-semibold text-zinc-300">
               agentic automation
             </strong>{" "}
-            show up where operators actually live, not as pilots that stall.
+            anchor in real workflows, earn sustained adoption, and compound value
+            for operators and the enterprise over time.
           </p>
         </header>
 
