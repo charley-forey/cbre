@@ -548,14 +548,29 @@ export default function Home() {
             <ProfilePhoto />
 
             <div className="min-w-0 flex-1 space-y-5">
-              <p className="text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
-                I move work from an ambiguous problem to clear success criteria,
-                evaluation, and disciplined releases. I translate tradeoffs for
-                executives and engineers in matrixed programs. The LibreChat and
-                n8n links above are deliberately open: you can see how I balance
-                traceability, guardrails, and adoption before anyone commits to a
-                roadmap.
-              </p>
+              <div className="space-y-4 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
+                <p>
+                  I am strongest when the mandate is ambiguous: turn intent into
+                  success criteria, sequencing, and releases that risk, security,
+                  and operations can stand behind. I carry one coherent story from
+                  executive forums to engineering reviews: tradeoffs, timelines,
+                  capital discipline, and where we deliberately say no.
+                </p>
+                <p>
+                  My background is enterprise AI and automation at scale: adoption
+                  across large internal and external footprints, platform work tied
+                  to revenue and pipeline reality, and playbooks that reduce
+                  failure modes so adoption sticks. That is the muscle Head of AI
+                  Products demands: judgment under uncertainty, measurable
+                  outcomes, and governance baked into the product, not bolted on
+                  after the fact.
+                </p>
+                <p>
+                  The LibreChat and n8n links above are deliberately open. Inspect
+                  how I operate before we argue about a roadmap. I would rather
+                  earn trust through transparency than sell it in a deck.
+                </p>
+              </div>
 
               <div>
                 <a
