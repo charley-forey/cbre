@@ -407,6 +407,12 @@ export default function Home() {
                 >
                   <YouTubeIcon />
                 </SocialLink>
+                <SocialLink
+                  href="https://www.youtube.com/@tool-runtime"
+                  label="YouTube — Tool Runtime"
+                >
+                  <YouTubeIcon />
+                </SocialLink>
               </div>
 
               <div>
