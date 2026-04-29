@@ -473,9 +473,10 @@ export default function Home() {
           >
             GitHub
           </h2>
-          <p className="mt-3 max-w-2xl text-pretty text-sm leading-relaxed text-zinc-500">
-            GitHub blocks embedding profiles in iframes, so this is a live list
-            of public repositories (same story as the profile, easier to scan).
+          <p className="mt-3 max-w-2xl text-pretty text-sm leading-relaxed text-zinc-400 sm:text-[15px]">
+            I am a hands-on builder. Below is public work I have developed and
+            shipped, synced live from GitHub so you can review recent delivery in
+            one place instead of clicking through a profile.
           </p>
           <div className="mt-6">
             <Suspense
