@@ -11,6 +11,35 @@ const mailtoHref = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
   "CBRE — Head of AI Products",
 )}`;
 
+/** Embeds start at the same timestamps as your shared watch links */
+const YOUTUBE_CLIPS: { id: string; start: number; caption: string }[] = [
+  {
+    id: "aGhIXDtRxoU",
+    start: 40,
+    caption: "Clip 1",
+  },
+  {
+    id: "vwLcu0ck7ik",
+    start: 88,
+    caption: "Clip 2",
+  },
+  {
+    id: "MZ5WsAj8gB0",
+    start: 65,
+    caption: "Clip 3",
+  },
+  {
+    id: "QJjYrZF2RVQ",
+    start: 106,
+    caption: "Clip 4",
+  },
+  {
+    id: "siY2zfgmupI",
+    start: 0,
+    caption: "Clip 5",
+  },
+];
+
 function ExternalIcon({ className }: { className?: string }) {
   return (
     <svg
@@ -345,6 +374,64 @@ export default function Home() {
             one or two themes against your reality than debating slide decks—
             that&apos;s how I tend to turn proof into credible product bets.
           </p>
+        </section>
+
+        <section
+          className="mb-16"
+          aria-labelledby="videos-heading"
+        >
+          <h2
+            id="videos-heading"
+            className="font-display text-xl font-semibold text-zinc-100"
+          >
+            Selected videos
+          </h2>
+          <p className="mt-3 max-w-2xl text-pretty text-sm leading-relaxed text-zinc-500">
+            Embedded so you can watch in-page—each player starts at the
+            timestamp from the links you chose. Nothing autoplays; iframes load
+            lazily to keep the page snappy.
+          </p>
+          <div className="mt-8 grid gap-8 md:grid-cols-2">
+            {YOUTUBE_CLIPS.map((clip) => {
+              const watchUrl =
+                clip.start > 0
+                  ? `https://www.youtube.com/watch?v=${clip.id}&t=${clip.start}s`
+                  : `https://www.youtube.com/watch?v=${clip.id}`;
+              const embedSrc =
+                clip.start > 0
+                  ? `https://www.youtube-nocookie.com/embed/${clip.id}?start=${clip.start}`
+                  : `https://www.youtube-nocookie.com/embed/${clip.id}`;
+              return (
+                <figure
+                  key={clip.id}
+                  className="overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950/60 ring-1 ring-white/5"
+                >
+                  <div className="aspect-video w-full bg-black">
+                    <iframe
+                      src={embedSrc}
+                      title={`Charley Forey — ${clip.caption}`}
+                      className="h-full w-full"
+                      loading="lazy"
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    />
+                  </div>
+                  <figcaption className="flex flex-wrap items-center justify-between gap-2 border-t border-zinc-800/80 px-3 py-2.5 text-xs text-zinc-500">
+                    <span className="text-zinc-400">{clip.caption}</span>
+                    <a
+                      href={watchUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium text-cbre-muted underline-offset-4 hover:text-cbre-bright hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
+                    >
+                      Open on YouTube
+                    </a>
+                  </figcaption>
+                </figure>
+              );
+            })}
+          </div>
         </section>
 
         <section

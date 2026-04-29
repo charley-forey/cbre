@@ -33,6 +33,10 @@ npm start
 | `public/charley-forey-resume-2026.pdf` | Resume download |
 | `public/charley.png` | Profile photo (from `profile_photo.png` or equivalent). If missing, an initials fallback is shown. |
 
+## Selected videos
+
+Embedded YouTube players live in `app/page.tsx` (`YOUTUBE_CLIPS`): IDs, `start` seconds, and optional captions. Uses `youtube-nocookie.com` embeds with `loading="lazy"` on iframes.
+
 ## Favicon & tab title
 
 - Browser tab title is set in `app/layout.tsx` (`metadata.title`).
