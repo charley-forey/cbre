@@ -16,7 +16,7 @@ Open [http://localhost:3000](http://localhost:3000).
 1. Push this repository to GitHub.
 2. In [Vercel](https://vercel.com), **Add New Project** and import the repo.
 3. Framework preset: **Next.js**. Root directory: `.` (repository root).
-4. No environment variables are required for the default build.
+4. Optional: set `NEXT_PUBLIC_SITE_URL` to your production URL (e.g. `https://your-domain.vercel.app`) so Open Graph preview URLs are correct if you are not using Vercel’s default `VERCEL_URL`.
 
 Production build locally:
 
@@ -30,7 +30,7 @@ npm start
 | File | Purpose |
 |------|---------|
 | `public/charley-forey-resume-2026.pdf` | Resume download |
-| `public/charley.jpg` | Optional profile photo (recommended ~512×512). If missing, an initials fallback is shown. |
+| `public/charley.png` | Profile photo (square crop recommended). If missing, an initials fallback is shown. |
 
 ## Repository notes
 

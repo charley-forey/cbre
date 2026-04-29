@@ -108,6 +108,21 @@ export default function Home() {
               </span>
             </a>
           </div>
+          <div className="mt-6 rounded-xl border border-zinc-800/60 bg-zinc-950/40 px-4 py-3 ring-1 ring-white/[0.03]">
+            <p className="text-xs font-semibold uppercase tracking-wider text-zinc-500">
+              What to try
+            </p>
+            <ul className="mt-2 space-y-1.5 text-sm text-zinc-500">
+              <li>
+                <span className="text-zinc-400">Chat — </span>
+                Multi-turn assistance, tool use, and grounded responses.
+              </li>
+              <li>
+                <span className="text-zinc-400">Flows — </span>
+                Orchestrated steps, integrations, and traceable runs.
+              </li>
+            </ul>
+          </div>
         </section>
 
         <section
