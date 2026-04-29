@@ -42,16 +42,21 @@ export default function Home() {
       <div className="pointer-events-none absolute -left-40 top-20 h-72 w-72 rounded-full bg-cbre/15 blur-[100px]" />
       <div className="pointer-events-none absolute -right-32 bottom-40 h-64 w-64 rounded-full bg-cbre/10 blur-[90px]" />
 
-      <main className="relative mx-auto max-w-2xl px-6 pb-24 pt-16 sm:px-8 sm:pt-24">
-        <div className="mb-10 flex justify-center">
-          <div className="rounded-2xl bg-black px-8 py-6 shadow-lg shadow-black/40 ring-1 ring-white/10">
+      <main className="relative mx-auto max-w-3xl px-5 pb-24 pt-12 sm:px-8 sm:pt-16">
+        <div className="relative mb-12 flex w-full justify-center sm:mb-14">
+          <div
+            className="pointer-events-none absolute inset-x-4 top-1/2 -z-10 h-40 -translate-y-1/2 rounded-[2rem] bg-cbre/20 blur-3xl sm:inset-x-8 sm:h-48 md:h-56"
+            aria-hidden
+          />
+          <div className="w-full rounded-3xl bg-black px-6 py-10 shadow-2xl shadow-black/60 ring-1 ring-cbre/25 ring-offset-2 ring-offset-zinc-950 sm:px-12 sm:py-12 md:px-16 md:py-14">
             <Image
               src="/cbre-logo.png"
               alt="CBRE"
-              width={280}
-              height={140}
+              width={960}
+              height={480}
               priority
-              className="mx-auto h-11 w-auto max-w-[200px] object-contain sm:h-12"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 820px"
+              className="mx-auto h-28 w-auto max-w-full object-contain sm:h-40 md:h-52 lg:h-64 xl:h-[17rem]"
             />
           </div>
         </div>
