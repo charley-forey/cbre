@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-deep: #09090b;
+  --accent: #22d3ee;
+  --accent-dim: rgba(34, 211, 238, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #e4e4e7;
+  background: var(--bg-deep);
+}
+
+/* subtle grid only on hero zone via Tailwind bg classes */
