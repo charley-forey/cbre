@@ -29,8 +29,9 @@ npm start
 
 | File | Purpose |
 |------|---------|
+| `public/cbre-logo.png` | CBRE wordmark (candidate interview context; see footer disclaimer). |
 | `public/charley-forey-resume-2026.pdf` | Resume download |
-| `public/charley.png` | Profile photo (square crop recommended). If missing, an initials fallback is shown. |
+| `public/charley.png` | Profile photo (from `profile_photo.png` or equivalent). If missing, an initials fallback is shown. |
 
 ## Repository notes
 

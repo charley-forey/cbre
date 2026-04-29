@@ -9,7 +9,7 @@ export function ProfilePhoto() {
   if (showFallback) {
     return (
       <div
-        className="flex h-32 w-32 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500/20 to-zinc-800 ring-1 ring-white/10"
+        className="flex h-32 w-32 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-cbre/25 to-zinc-800 ring-1 ring-white/10"
         aria-hidden
       >
         <span className="font-display text-2xl font-semibold tracking-tight text-zinc-100">

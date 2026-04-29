@@ -23,14 +23,16 @@ const config: Config = {
         ],
       },
       colors: {
-        accent: {
-          DEFAULT: "#22d3ee",
-          muted: "#0891b2",
+        /** CBRE brand green — interview landing context */
+        cbre: {
+          DEFAULT: "#006A4D",
+          bright: "#4ecf9a",
+          muted: "#0d8f66",
         },
       },
       backgroundImage: {
         "grid-fade":
-          "linear-gradient(to bottom, rgba(9,9,11,0.2), rgba(9,9,11,0.95)), linear-gradient(rgba(34,211,238,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(34,211,238,0.05) 1px, transparent 1px)",
+          "linear-gradient(to bottom, rgba(9,9,11,0.2), rgba(9,9,11,0.95)), linear-gradient(rgba(0,106,77,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(0,106,77,0.06) 1px, transparent 1px)",
       },
     },
   },

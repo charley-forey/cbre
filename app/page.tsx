@@ -1,4 +1,5 @@
 import { ProfilePhoto } from "@/components/ProfilePhoto";
+import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
@@ -33,10 +34,23 @@ export default function Home() {
         className="pointer-events-none absolute inset-0 bg-[length:48px_48px] bg-grid-fade opacity-100"
         aria-hidden
       />
-      <div className="pointer-events-none absolute -left-40 top-20 h-72 w-72 rounded-full bg-cyan-500/10 blur-[100px]" />
-      <div className="pointer-events-none absolute -right-32 bottom-40 h-64 w-64 rounded-full bg-cyan-600/5 blur-[90px]" />
+      <div className="pointer-events-none absolute -left-40 top-20 h-72 w-72 rounded-full bg-cbre/15 blur-[100px]" />
+      <div className="pointer-events-none absolute -right-32 bottom-40 h-64 w-64 rounded-full bg-cbre/10 blur-[90px]" />
 
       <main className="relative mx-auto max-w-2xl px-6 pb-24 pt-16 sm:px-8 sm:pt-24">
+        <div className="mb-10 flex justify-center">
+          <div className="rounded-2xl bg-black px-8 py-6 shadow-lg shadow-black/40 ring-1 ring-white/10">
+            <Image
+              src="/cbre-logo.png"
+              alt="CBRE"
+              width={280}
+              height={140}
+              priority
+              className="mx-auto h-11 w-auto max-w-[200px] object-contain sm:h-12"
+            />
+          </div>
+        </div>
+
         <p className="mb-6 text-center text-xs font-medium uppercase tracking-[0.2em] text-zinc-500">
           Built for CBRE conversation · April 2026
         </p>
@@ -45,7 +59,7 @@ export default function Home() {
           <h1 className="font-display text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-4xl">
             Head of AI Products
           </h1>
-          <p className="mt-3 text-lg text-cyan-400/90 sm:text-xl">
+          <p className="mt-3 text-lg text-cbre-bright sm:text-xl">
             Strategy, demos &amp; how I work
           </p>
           <p className="mx-auto mt-8 max-w-xl text-pretty text-base leading-relaxed text-zinc-400 sm:text-[17px]">
@@ -76,7 +90,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open AI chat demo at chat.creai.solutions in a new tab"
-              className="group flex flex-col rounded-2xl border border-zinc-800 bg-zinc-900/50 px-6 py-8 text-left shadow-sm ring-1 ring-white/5 transition hover:border-cyan-500/30 hover:bg-zinc-900/80 hover:ring-cyan-500/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
+              className="group flex flex-col rounded-2xl border border-zinc-800 bg-zinc-900/50 px-6 py-8 text-left shadow-sm ring-1 ring-white/5 transition hover:border-cbre/40 hover:bg-zinc-900/80 hover:ring-cbre/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
             >
               <span className="font-display text-lg font-semibold text-zinc-100">
                 AI chat demo
@@ -84,7 +98,7 @@ export default function Home() {
               <span className="mt-2 text-sm text-zinc-500">
                 Conversational agents &amp; assistance
               </span>
-              <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-cyan-400/90">
+              <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-cbre-bright">
                 chat.creai.solutions
                 <ExternalIcon className="opacity-70 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </span>
@@ -94,7 +108,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open workflow automation demo at flows.creai.solutions in a new tab"
-              className="group flex flex-col rounded-2xl border border-zinc-800 bg-zinc-900/50 px-6 py-8 text-left shadow-sm ring-1 ring-white/5 transition hover:border-cyan-500/30 hover:bg-zinc-900/80 hover:ring-cyan-500/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
+              className="group flex flex-col rounded-2xl border border-zinc-800 bg-zinc-900/50 px-6 py-8 text-left shadow-sm ring-1 ring-white/5 transition hover:border-cbre/40 hover:bg-zinc-900/80 hover:ring-cbre/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
             >
               <span className="font-display text-lg font-semibold text-zinc-100">
                 Workflow automation
@@ -102,7 +116,7 @@ export default function Home() {
               <span className="mt-2 text-sm text-zinc-500">
                 Orchestration &amp; integrations
               </span>
-              <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-cyan-400/90">
+              <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-cbre-bright">
                 flows.creai.solutions
                 <ExternalIcon className="opacity-70 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </span>
@@ -114,11 +128,11 @@ export default function Home() {
             </p>
             <ul className="mt-2 space-y-1.5 text-sm text-zinc-500">
               <li>
-                <span className="text-zinc-400">Chat — </span>
+                <span className="text-cbre-muted">Chat — </span>
                 Multi-turn assistance, tool use, and grounded responses.
               </li>
               <li>
-                <span className="text-zinc-400">Flows — </span>
+                <span className="text-cbre-muted">Flows — </span>
                 Orchestrated steps, integrations, and traceable runs.
               </li>
             </ul>
@@ -182,7 +196,7 @@ export default function Home() {
                 <a
                   href="/charley-forey-resume-2026.pdf"
                   download
-                  className="inline-flex items-center gap-2 rounded-xl border border-cyan-500/30 bg-cyan-500/10 px-5 py-3 text-sm font-semibold text-cyan-300 transition hover:bg-cyan-500/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
+                  className="inline-flex items-center gap-2 rounded-xl border border-cbre/35 bg-cbre/15 px-5 py-3 text-sm font-semibold text-cbre-bright transition hover:bg-cbre/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
                 >
                   Download resume (PDF)
                   <svg
@@ -205,16 +219,21 @@ export default function Home() {
           </div>
         </section>
 
-        <footer className="mt-16 text-center text-sm text-zinc-600">
+        <footer className="mt-16 space-y-3 text-center text-sm text-zinc-600">
           <p>
             Demos &amp; site by{" "}
             <Link
               href="https://creai.solutions"
-              className="text-zinc-500 underline-offset-4 hover:text-cyan-400/90 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
+              className="text-zinc-500 underline-offset-4 hover:text-cbre-bright hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
             >
               creai.solutions
             </Link>
-            . Independent preview — not affiliated with CBRE.
+            .
+          </p>
+          <p className="mx-auto max-w-md text-xs leading-relaxed text-zinc-600">
+            CBRE® and related marks are trademarks of CBRE Group, Inc. This page
+            is an independent candidate resource for interview discussion and is
+            not affiliated with or endorsed by CBRE.
           </p>
         </footer>
       </main>
@@ -236,7 +255,7 @@ function SocialLink({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900/60 px-3 py-2 text-sm text-zinc-300 transition hover:border-zinc-700 hover:text-cyan-300/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
+      className="inline-flex items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900/60 px-3 py-2 text-sm text-zinc-300 transition hover:border-zinc-700 hover:text-cbre-bright focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
     >
       <span className="text-zinc-500">{children}</span>
       <span>{label}</span>
