@@ -119,7 +119,7 @@ export default function Home() {
 
         <header className="mb-14 text-center">
           <h1 className="font-display text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-4xl">
-            Head Of AI Products
+            Head of AI Products
           </h1>
           <p className="mx-auto mt-4 max-w-xl font-display text-lg font-semibold leading-snug tracking-tight text-cbre-bright sm:text-xl">
             Trusted & Measurable AI in Production at Enterprise Scale
@@ -156,7 +156,7 @@ export default function Home() {
             How I Map To The Role
           </h2>
           <p className="mt-3 max-w-2xl text-pretty text-sm leading-snug text-zinc-500">
-            Head Of AI Products scope in brief: where my track record shows up.
+            Head of AI Products scope in brief: where my track record shows up.
           </p>
           <ul className="mt-5 max-w-2xl space-y-3 text-pretty text-sm leading-snug text-zinc-400 sm:text-[15px]">
             <li className="flex gap-3">
