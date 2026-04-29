@@ -121,8 +121,8 @@ export default function Home() {
           <h1 className="font-display text-3xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-4xl">
             Head Of AI Products
           </h1>
-          <p className="mt-3 text-lg text-cbre-bright sm:text-xl">
-            Roadmap Thinking, Live Demos, And Operating Rhythm
+          <p className="mx-auto mt-4 max-w-xl font-display text-lg font-semibold leading-snug tracking-tight text-cbre-bright sm:text-xl">
+            Trusted & Measurable AI in Production at Enterprise Scale
           </p>
           <p className="mx-auto mt-8 max-w-xl text-pretty text-base leading-relaxed text-zinc-400 sm:text-[17px]">
             Enterprise AI product leadership turns ambiguous opportunities into{" "}
