@@ -4,11 +4,11 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const NAV_ITEMS: { href: string; label: string; id: string }[] = [
-  { href: "#section-fit", label: "Fit", id: "section-fit" },
   { href: "#section-proof", label: "Proof", id: "section-proof" },
   { href: "#section-demos", label: "Demos", id: "section-demos" },
   { href: "#section-alignment", label: "Alignment", id: "section-alignment" },
   { href: "#section-videos", label: "Videos", id: "section-videos" },
+  { href: "#section-github", label: "GitHub", id: "section-github" },
   { href: "#section-contact", label: "Contact", id: "section-contact" },
 ];
 

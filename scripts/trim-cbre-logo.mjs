@@ -16,11 +16,11 @@ if (!fs.existsSync(backup)) {
   fs.copyFileSync(input, backup);
 }
 
-// Trim "boring" edge pixels (matches top-left / background)
+// Trim "boring" edge pixels (matches top-left / background).
+// Higher threshold crops tighter when the asset has extra canvas / letterboxing.
 const trimmed = await sharp(buf)
   .trim({
-    // Slightly looser than default so near-black anti-aliased edge still crops
-    threshold: 12,
+    threshold: Number(process.env.CBRE_LOGO_TRIM_THRESHOLD ?? 22),
   })
   .png()
   .toBuffer();

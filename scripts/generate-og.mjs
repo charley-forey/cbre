@@ -22,7 +22,7 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
   <text x="72" y="220" font-family="system-ui, Segoe UI, sans-serif" font-size="46" font-weight="600" fill="#fafafa">Head Of AI Products</text>
   <text x="72" y="288" font-family="system-ui, Segoe UI, sans-serif" font-size="32" fill="#4ecf9a">Charley Forey</text>
   <text x="72" y="370" font-family="system-ui, Segoe UI, sans-serif" font-size="26" fill="#a1a1aa">Live Demos And Role Conversation</text>
-  <text x="72" y="540" font-family="system-ui, Segoe UI, sans-serif" font-size="17" fill="#71717a">Independent candidate resource — not affiliated with CBRE</text>
+  <text x="72" y="540" font-family="system-ui, Segoe UI, sans-serif" font-size="17" fill="#71717a">Independent candidate resource, not affiliated with CBRE</text>
 </svg>`;
 
 await sharp(Buffer.from(svg)).png().toFile(out);

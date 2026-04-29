@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         url: "/og-cbre-conversation.png",
         width: 1200,
         height: 630,
-        alt: "Head Of AI Products — Charley Forey — Live demos and role conversation",
+        alt: "Head Of AI Products | Charley Forey | Live demos and role conversation",
       },
     ],
     locale: "en_US",
