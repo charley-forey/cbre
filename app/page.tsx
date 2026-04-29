@@ -165,28 +165,62 @@ export default function Home() {
         </section>
 
         <section
-          className="mb-20 space-y-4"
+          className="mb-16 space-y-6"
           aria-labelledby="demo-links-heading"
         >
-          <h2
-            id="demo-links-heading"
-            className="sr-only"
-          >
-            Live demos
-          </h2>
+          <div>
+            <h2
+              id="demo-links-heading"
+              className="font-display text-xl font-semibold text-zinc-100 sm:text-2xl"
+            >
+              Live proof-of-concept demos
+            </h2>
+            <p className="mt-4 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
+              These links go to working environments I stood up on{" "}
+              <strong className="font-semibold text-zinc-300">LibreChat</strong>{" "}
+              (conversational AI, agents, MCP-style tooling) and{" "}
+              <strong className="font-semibold text-zinc-300">n8n</strong>{" "}
+              (workflow automation and integrations)—the same categories of
+              products enterprises already run at scale. The intent is a{" "}
+              <strong className="font-semibold text-zinc-300">
+                tangible reference
+              </strong>
+              : “what it feels like” when you pair modern chat + orchestration
+              with your data and governance—not a CBRE production system, but a
+              credible pattern you can react to and tear apart together.
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-zinc-500">
+              <span className="text-zinc-400">Why these stacks: </span>
+              Organizations such as{" "}
+              <strong className="font-medium text-zinc-400">Spotify</strong>{" "}
+              have publicly associated with{" "}
+              <strong className="font-medium text-zinc-400">LibreChat</strong>{" "}
+              for internal AI;{" "}
+              <strong className="font-medium text-zinc-400">Trimble</strong>{" "}
+              (where I ship agentic platform work) uses{" "}
+              <strong className="font-medium text-zinc-400">n8n</strong> in
+              production alongside other enterprise automation—so this isn’t a
+              toy stack; it’s what serious operators already standardize on.
+            </p>
+          </div>
+
           <div className="grid gap-4 sm:grid-cols-2">
             <a
               href={chatUrl}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Open AI chat demo at chat.creai.solutions in a new tab"
+              aria-label="Open LibreChat proof of concept at chat.creai.solutions"
               className="group flex flex-col rounded-2xl border border-zinc-800 bg-zinc-900/50 px-6 py-8 text-left shadow-sm ring-1 ring-white/5 transition hover:border-cbre/40 hover:bg-zinc-900/80 hover:ring-cbre/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
             >
-              <span className="font-display text-lg font-semibold text-zinc-100">
-                AI chat demo
+              <span className="text-xs font-semibold uppercase tracking-wider text-cbre-muted">
+                LibreChat
               </span>
-              <span className="mt-2 text-sm text-zinc-500">
-                Conversational agents &amp; assistance
+              <span className="font-display mt-2 text-lg font-semibold text-zinc-100">
+                Conversational AI &amp; agents
+              </span>
+              <span className="mt-2 text-sm leading-snug text-zinc-500">
+                Multi-turn chat, tool use, MCP servers—how teams ship internal
+                copilots and grounded assistance with evaluation hooks.
               </span>
               <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-cbre-bright">
                 chat.creai.solutions
@@ -197,14 +231,19 @@ export default function Home() {
               href={flowsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Open workflow automation demo at flows.creai.solutions in a new tab"
+              aria-label="Open n8n proof of concept at flows.creai.solutions"
               className="group flex flex-col rounded-2xl border border-zinc-800 bg-zinc-900/50 px-6 py-8 text-left shadow-sm ring-1 ring-white/5 transition hover:border-cbre/40 hover:bg-zinc-900/80 hover:ring-cbre/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cbre"
             >
-              <span className="font-display text-lg font-semibold text-zinc-100">
+              <span className="text-xs font-semibold uppercase tracking-wider text-cbre-muted">
+                n8n
+              </span>
+              <span className="font-display mt-2 text-lg font-semibold text-zinc-100">
                 Workflow automation
               </span>
-              <span className="mt-2 text-sm text-zinc-500">
-                Orchestration &amp; integrations
+              <span className="mt-2 text-sm leading-snug text-zinc-500">
+                Orchestration across APIs and systems—repeatable runbooks,
+                hand-offs, and logs enterprises need before anything touches
+                prod-scale SLAs.
               </span>
               <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-cbre-bright">
                 flows.creai.solutions
@@ -212,21 +251,100 @@ export default function Home() {
               </span>
             </a>
           </div>
-          <div className="mt-6 rounded-xl border border-zinc-800/60 bg-zinc-950/40 px-4 py-3 ring-1 ring-white/[0.03]">
+
+          <div className="rounded-xl border border-zinc-800/60 bg-zinc-950/40 px-4 py-4 ring-1 ring-white/[0.03] sm:px-5">
             <p className="text-xs font-semibold uppercase tracking-wider text-zinc-500">
-              What to try
+              What I&apos;m building in this POC
             </p>
-            <ul className="mt-2 space-y-1.5 text-sm text-zinc-500">
+            <ul className="mt-3 space-y-2 text-sm leading-relaxed text-zinc-400">
               <li>
-                <span className="text-cbre-muted">Chat — </span>
-                Multi-turn assistance, tool use, and grounded responses.
+                <span className="font-medium text-cbre-muted">
+                  LibreChat —{" "}
+                </span>
+                Targeted agents and MCP integrations that mirror how I&apos;d
+                pilot grounded GenAI (eval-friendly, traceable tool calls)—so you
+                can judge product judgment, not slide theory.
               </li>
               <li>
-                <span className="text-cbre-muted">Flows — </span>
-                Orchestrated steps, integrations, and traceable runs.
+                <span className="font-medium text-cbre-muted">n8n — </span>
+                Flows that show cross-system coordination with clear ownership
+                between steps—how I&apos;d demonstrate orchestration before we
+                commit capital to platform-wide rollout.
               </li>
             </ul>
           </div>
+        </section>
+
+        <section
+          className="mb-16 rounded-2xl border border-zinc-800/80 bg-zinc-950/40 p-8 ring-1 ring-white/5 sm:p-10"
+          aria-labelledby="ideas-heading"
+        >
+          <h2
+            id="ideas-heading"
+            className="font-display text-xl font-semibold text-zinc-100"
+          >
+            Ideas to explore together
+          </h2>
+          <p className="mt-4 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
+            CBRE&apos;s roadmap and constraints are yours to define—these are{" "}
+            <strong className="font-semibold text-zinc-300">
+              conversation starters
+            </strong>
+            , not instructions. I&apos;m listing hypotheses I&apos;d validate
+            with product, data, engineering, and risk partners so we can quickly
+            separate signal from theater.
+          </p>
+          <ul className="mt-6 space-y-4 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
+            <li className="flex gap-3">
+              <span
+                className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cbre"
+                aria-hidden
+              />
+              <span>
+                <strong className="font-semibold text-zinc-300">
+                  Document-heavy workflows (GenAI):
+                </strong>{" "}
+                Retrieval + citations across leases, OMs, work orders, and
+                tickets—with role-aware access and evaluation gates—often the
+                fastest credible win when data is messy but high-value.
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <span
+                className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cbre"
+                aria-hidden
+              />
+              <span>
+                <strong className="font-semibold text-zinc-300">
+                  Agent + MCP patterns:
+                </strong>{" "}
+                Assistants that{" "}
+                <span className="font-medium text-zinc-300">do work</span> via
+                governed tool calls into internal systems, not just chat—paired
+                with logging and human-in-the-loop approvals where outcomes are
+                material.
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <span
+                className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cbre"
+                aria-hidden
+              />
+              <span>
+                <strong className="font-semibold text-zinc-300">
+                  Orchestrated operations (n8n-class):
+                </strong>{" "}
+                Repeatable runbooks for facilities, portfolio, or service-line
+                processes—retries, routing, and audit trails—so automation scales
+                without losing the enterprise bar on reliability.
+              </span>
+            </li>
+          </ul>
+          <p className="mt-6 border-t border-zinc-800/80 pt-6 text-sm leading-relaxed text-zinc-500">
+            If this resonates, I&apos;d rather spend our time pressure-testing
+            one or two themes against your reality than debating slide decks—
+            that&apos;s how I tend to turn proof into credible product bets.
+          </p>
         </section>
 
         <section
