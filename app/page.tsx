@@ -11,12 +11,6 @@ const mailtoHref = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
   "CBRE — Head of AI Products",
 )}`;
 
-const PROOF_POINTS = [
-  "Shipped AI and automation initiatives from discovery through adoption—pairing clear success metrics with evaluation harnesses and staged rollout so stakeholders trust what goes live.",
-  "Worked across product, data science, and engineering to define the full model lifecycle: selection criteria, monitoring, retraining triggers, and production readiness checkpoints.",
-  "Embedded responsible-AI practice—human-in-the-loop, auditability, and vendor/tooling standards—so GenAI and agentic workflows stay explainable and governable at enterprise scale.",
-];
-
 function ExternalIcon({ className }: { className?: string }) {
   return (
     <svg
@@ -95,16 +89,73 @@ export default function Home() {
           >
             Proof points
           </h2>
-          <ul className="mt-5 space-y-3.5">
-            {PROOF_POINTS.map((text, i) => (
-              <li
-                key={i}
-                className="flex gap-3 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base"
-              >
-                <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-cbre" />
-                <span>{text}</span>
-              </li>
-            ))}
+          <ul className="mt-5 space-y-4">
+            <li className="flex gap-3 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
+              <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-cbre" />
+              <span>
+                <strong className="font-semibold text-zinc-300">
+                  Trimble — Agentic AI Platform (Principal AI Solutions Architect):
+                </strong>{" "}
+                Shipped{" "}
+                <strong className="font-semibold text-zinc-300">2,000+</strong>{" "}
+                API nodes,{" "}
+                <strong className="font-semibold text-zinc-300">1,500+</strong>{" "}
+                MCP tools, and{" "}
+                <strong className="font-semibold text-zinc-300">50+</strong>{" "}
+                production AI workflows—platform scope tied to{" "}
+                <strong className="font-semibold text-zinc-300">$14M+</strong>{" "}
+                in opportunity—while scaling adoption to{" "}
+                <strong className="font-semibold text-zinc-300">150+</strong>{" "}
+                internal and external teams and{" "}
+                <strong className="font-semibold text-zinc-300">~40%</strong>{" "}
+                improvement in decision-making across those teams (program
+                metrics).
+              </span>
+            </li>
+            <li className="flex gap-3 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
+              <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-cbre" />
+              <span>
+                <strong className="font-semibold text-zinc-300">
+                  Revenue &amp; enablement:
+                </strong>{" "}
+                Influenced{" "}
+                <strong className="font-semibold text-zinc-300">$4M ARR</strong>{" "}
+                closed-won by aligning platform capabilities with{" "}
+                <strong className="font-semibold text-zinc-300">200+</strong>{" "}
+                stakeholders; authored{" "}
+                <strong className="font-semibold text-zinc-300">15+</strong>{" "}
+                guides and templates that reduced implementation errors{" "}
+                <strong className="font-semibold text-zinc-300">~25%</strong>;{" "}
+                presented at{" "}
+                <strong className="font-semibold text-zinc-300">4</strong>{" "}
+                industry conferences (
+                <strong className="font-semibold text-zinc-300">5,000+</strong>{" "}
+                attendees) to build adoption and credibility.
+              </span>
+            </li>
+            <li className="flex gap-3 text-pretty text-[15px] leading-relaxed text-zinc-400 sm:text-base">
+              <CheckIcon className="mt-0.5 h-5 w-5 shrink-0 text-cbre" />
+              <span>
+                <strong className="font-semibold text-zinc-300">
+                  Integrations + GenAI engineering:
+                </strong>{" "}
+                Delivered{" "}
+                <strong className="font-semibold text-zinc-300">21</strong>{" "}
+                production{" "}
+                <strong className="font-semibold text-zinc-300">C#</strong>{" "}
+                connectors mapping{" "}
+                <strong className="font-semibold text-zinc-300">2,500+</strong>{" "}
+                endpoints (
+                <strong className="font-semibold text-zinc-300">$10M+</strong>{" "}
+                pipeline;{" "}
+                <strong className="font-semibold text-zinc-300">$4M+</strong>{" "}
+                proposed development scope). Built{" "}
+                <strong className="font-semibold text-zinc-300">Ludex AI</strong>
+                —LLM fine-tuning, RAG, vector embeddings, and custom MCP
+                servers—for NL→SQL analytics: the same architectural patterns I
+                bring to enterprise GenAI products.
+              </span>
+            </li>
           </ul>
         </section>
 
